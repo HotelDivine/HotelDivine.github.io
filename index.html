@@ -1,95 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title>Hotel Divine</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="En nuestro hotel, nos esforzamos por garantizarle una experiencia inolvidable. Contamos con un equipo amable y servicial que estará a su disposición en todo momento para brindarle la asistencia que necesite."
+        />
+        <meta name="author" content="Katia, Nando, Matias, Diego y el otro" />
+        <link rel="icon" type="image/x-icon" href="images/logo.png" />
+        <meta name="theme-color" content="#EAEBAAFF" />
 
-<head>
-    <title>Hotel Divine</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="En nuestro hotel, nos esforzamos por garantizarle una experiencia inolvidable. Contamos con un equipo amable y servicial que estará a su disposición en todo momento para brindarle la asistencia que necesite.">
-    <meta name="author" content="Katia, Nando, Matias, Diego y el otro">
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <meta name="theme-color" content="#EAEBAAFF">
+        <meta property="og:title" content="Hotel Divine" />
+        <meta
+            property="og:description"
+            content="En nuestro hotel, nos esforzamos por garantizarle una experiencia inolvidable. Contamos con un equipo amable y servicial que estará a su disposición en todo momento para brindarle la asistencia que necesite."
+        />
+        <meta
+            property="og:image"
+            content="https://HotelDivine.github.io/images/logo.png"
+        />
+        <meta property="og:url" content="https://HotelDivine.github.io" />
 
-    <meta property="og:title" content="Hotel Divine">
-    <meta property="og:description" content="En nuestro hotel, nos esforzamos por garantizarle una experiencia inolvidable. Contamos con un equipo amable y servicial que estará a su disposición en todo momento para brindarle la asistencia que necesite.">
-    <meta property="og:image" content="https://HotelDivine.github.io/images/logo.png">
-    <meta property="og:url" content="https://HotelDivine.github.io">
-    
+        <link rel="stylesheet" href="estilo.css" />
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
+        <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+        <script src="funcionalidades/habitaciones.js"></script>
+    </head>
 
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
-    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <body>
+        <header>
+            <!-- Matias agrega un nav de bootstrap justo aqui -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <h1><a class="navbar-brand" href="#">LOGO</a></h1>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    href="#"
+                                    >Inicio</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    role="button"
+                                    aria-expanded="false"
+                                >
+                                    Reservas
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+           
+        </header>
 
-    <script src="funcionalidades/habitaciones.js"></script>
-
-</head>
-
-<body>
-    <header>
-        <h1>Hotel Divine</h1>
-
-
-        <!-- Matias agrega un nav de bootstrap justo aqui -->
-        <!-- 
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Habitaciones</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">SPA</a></li>
-                <li><a href="#">Restaurant</a></li>
-                <li><a href="#">SPA</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Reserva</a></li>
-            </ul>
-        </nav> -->
-    </header>
-
-    <main>
-        <div class="wrapper">
-            <div class="container">
-                <div class="row rooms" id="rooms">
-
-                    <!-- <div class="col-md-3 card">
+        <main>
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row rooms" id="rooms">
+                        <!-- <div class="col-md-3 card">
                         <img src="imagen" alt="">
                         <p>Ambientes</p>
                         <p>precio</p>
                         <p>Vacante</p>
                     </div>
  -->
-
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <main>
+        <!-- <main>
         <h2>Bienvenido al Hotel Divine</h2>
 
         <p>En nuestro hotel, nos esforzamos por garantizarle una experiencia inolvidable. Contamos con un equipo amable y servicial que estará a su disposición en todo momento para brindarle la asistencia que necesite. Además, nuestras habitaciones están diseñadas para brindarle la máxima comodidad y relajación durante su estadía. Ofrecemos una amplia variedad de servicios y comodidades para asegurarnos de que tenga todo lo que necesita a su alcance. Desde nuestro delicioso desayuno hasta nuestra piscina al aire libre, estamos seguros de que encontrará todo lo necesario para disfrutar al máximo de sus vacaciones en nuestro hotel.</p>
@@ -113,6 +127,5 @@
         </ul>
 
     </main> -->
-</body>
-
+    </body>
 </html>
