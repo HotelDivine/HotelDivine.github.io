@@ -1,2 +1,2 @@
 # HotelDivine.github.io
-[title](https://hoteldivine.github.io/)
+[Live View de la página](https://hoteldivine.github.io/)
