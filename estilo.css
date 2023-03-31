@@ -7,13 +7,13 @@ body {
 }
 
 header {
-    border-bottom: #333 solid 3px;
+    border-bottom: #333 solid 2px;
 }
 
 h1 {
     margin: 0;
     font-size: 36px;
-    margin-right: 58%;
+    margin-right: 48%;
 }
 
 nav ul {
