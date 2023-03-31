@@ -7,14 +7,13 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    border-bottom: #333 solid 3px;
 }
 
 h1 {
     margin: 0;
     font-size: 36px;
+    margin-right: 58%;
 }
 
 nav ul {
@@ -29,7 +28,7 @@ nav li {
 }
 
 nav a {
-    color: #fff;
+    color: black;
     text-decoration: none;
     font-size: 18px;
 }
