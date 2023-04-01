@@ -47,6 +47,8 @@ p {
     line-height: 1.5em;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: rgb(212, 212, 212);
+
 }
 
 .hero {
@@ -60,8 +62,10 @@ p {
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
 
-p{
-    color: rgb(212, 212, 212);
+.hero .rectangulo{
+    height: 8vh;
 }
 
-
+.hero .container{
+    height: 100%;
+}
