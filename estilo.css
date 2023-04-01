@@ -54,3 +54,10 @@ p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+main section {
+    height: 640px;
+    background-image: url(/images/hero_room_test.jpg);
+    background-size: cover;
+    background-position: center center;
+}
