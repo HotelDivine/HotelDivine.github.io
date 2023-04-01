@@ -51,17 +51,17 @@ p {
 
 .hero {
     height: 90vh;
-    background-image:  url(/images/hero_room_test.jpg);
+    background-image:  url(/images/hero_room_darked_test.jpg);
     background-size: cover;
     background-position: center center;
-    position: relative;
 }
 
-.hero .color-overlay{
-    background: black;
-    width: 100%;
-    height: 100%;
-    opacity: .3;
-    position: absolute;
-
+.hero h1, h3, p{
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
+
+p{
+    color: rgb(212, 212, 212);
+}
+
+
