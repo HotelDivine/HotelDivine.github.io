@@ -1,48 +1,56 @@
 let json = [
     {
-        "Numero": 1,
+        "Numero": "VISTA AL MAR",
+        "Description":"Habitación doble con vista al mar y balcón privado. Esta habitación es perfecta para parejas que buscan una escapada romántica. Disfruta de las impresionantes vistas al mar desde tu balcón privado mientras tomas una copa de vino",
         "ambientes": 2,
         "precio": 1500,
         "Vacante": true
     },
     {
-        "Numero": 2,
+        "Numero": "INDIVIDUAL",
+        "Description":"Habitación individual con cama king size y baño privado. Esta habitación es ideal para viajeros solitarios que buscan comodidad y privacidad. Descansa en la cama king size después de un largo día de turismo y relájate en tu baño privado.",
         "ambientes": 6,
         "precio": 3000,
         "Vacante": false
     },
     {
-        "Numero": 3,
+        "Numero": "SUITE",
+        "Description":"Suite junior con sala de estar y vistas panorámicas a la ciudad. Esta suite es perfecta para aquellos que buscan un poco más de espacio y comodidad. Disfruta de las vistas panorámicas a la ciudad desde tu sala de estar mientras te relajas en el sofá.",
         "ambientes": 9,
         "precio": 7000,
         "Vacante": false
     },
     {
-        "Numero": 4,
+        "Numero": "FAMILIAR",
+        "Description":"Habitación familiar con dos camas dobles y cocina americana. Esta habitación es ideal para familias que buscan comodidad y espacio. Prepara tus propias comidas en la cocina americana y descansa en las cómodas camas dobles después de un día lleno de diversión.",
         "ambientes": 1,
         "precio": 250,
         "Vacante": true
     },
     {
-        "Numero": 5,
+        "Numero": "EJECUTIVA",
+        "Description":"Habitación ejecutiva con escritorio y vistas a la montaña. Esta habitación es perfecta para viajeros de negocios que necesitan trabajar durante su estancia. Disfruta de las impresionantes vistas a la montaña mientras trabajas en tu escritorio.",
         "ambientes": 8,
         "precio": 170,
         "Vacante": false
     },
     {
-        "Numero": 6,
+        "Numero": "LUJOSA",
+        "Description":"Habitación superior con cama queen size y bañera de hidromasaje. Esta habitación es perfecta para aquellos que buscan un poco más de lujo durante su estancia. Relájate en la bañera de hidromasaje después de un largo día y descansa en la cómoda cama queen size.",
         "ambientes": 5,
         "precio": 220,
         "Vacante": false
     },
     {
-        "Numero": 7,
+        "Numero": "ESTANDAR",
+        "Description":"Habitación estándar con dos camas individuales y vistas al jardín. Esta habitación es ideal para aquellos que buscan una estancia cómoda y sencilla. Disfruta de las vistas al jardín mientras descansas en las cómodas camas individuales.",
         "ambientes": 7,
         "precio": 190,
         "Vacante": false
     },
     {
-        "Numero": 8,
+        "Numero": "SUITE PRESIDENCIAL",
+        "Description":"Suite presidencial con sala de estar, comedor y terraza privada. Esta suite es perfecta para aquellos que buscan lo mejor durante su estancia. Disfruta de la amplia sala de estar, el comedor y la terraza privada mientras te relajas en el lujo.",
         "ambientes": 4,
         "precio": 160,
         "Vacante": false
@@ -51,6 +59,7 @@ let json = [
 for (var response in json) {
     let datos = json[response];
     let Numero = datos["Numero"];
+    let Description = datos["Description"];
     let ambientes = datos["ambientes"];
     let precio = datos["precio"];
     let Vacante = datos["Vacante"];
@@ -65,7 +74,7 @@ for (var response in json) {
 
         let p = document.createElement("p");
         p.id = "description";
-        p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Iusto aperiam assumenda facilis placeat dicta dolor explicabo repudiandae. A, consequuntur quos expedita ab praesentium sapiente perferendis, vel, esse eveniet ipsum, temporibus.";
+        p.innerHTML = Description;
         div.appendChild(p);
 
         let roomFeaturesDiv = document.createElement("div");
