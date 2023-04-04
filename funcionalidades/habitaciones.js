@@ -67,6 +67,7 @@ for (var response in json) {
 
     mostrarHabitaciones(datos);
 }
+
     /*
 console.log(`Numero de la habitación: ${id}`);
 console.log(`Ambientes: ${ambientes}`);
