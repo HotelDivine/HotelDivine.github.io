@@ -1,22 +1,29 @@
+body{
+	overflow-x: hidden !important;
+	width: 100vw !important;
+	margin: 0px !important;
+}
+.row{
+	margin: 0 !important;
+	padding: 0 !important;
+}
 *{
 	font-family: sans-serif;
 }
-
-.btn-reservation{
-	background-color: #59B4C3 !important;
-	border: none !important;
+.mb-16{
+	margin-bottom: 16px;
 }
+
 .room{
-	height: 300px;
+	height: auto;
 }
 .room-media-img{
 	height: 100%;
 	position: relative;
-	overflow: hidden;
 }
 .calification{
 	padding: 5px 17px 5px 15px !important;
-	background-color: #59B4C3;
+	background-color: #A47E1B;
 	position: absolute;
 	z-index: 100;
 	top: 10px;
@@ -25,35 +32,78 @@ p.description{
 	font-size: 1rem;
 }
 .calification i{
-	color: #FFD800FF;
+	color: #fff;
 }
 .calification p{
 	margin: 0;
 	color: #fff;
 	font-weight: 700;
 }
-.price{
-	background-color: #007F0E;
-	position: absolute;
-	padding: 10px;
-	z-index: 101;
-	right: 0px;
-	bottom: 40px;
-	
+.prices *{
+	margin: 0;
 }
-.price h4 {
-	font-size: 1.4em;
+span.price {
+	font-size: 1.5em;
 	margin: 0;
 	font-weight: 700;
-	color: #FFFFFF;
+	color: #fff;
+}
+p.top{
+	margin: 0 !important;
+	align-items: center;
+}
+
+.rooms .col-md-12{
+	padding: 0 auto !important;
+}
+.rooms *{
+	color: #F2EDE3;
+}
+.room:nth-child(even),
+.room-title:nth-child(even){
+	background-color: #171A1B !important;
+}
+.room-title{
+	padding: 50px 0 30px;
+}
+.rooms:not(:nth-child(even)){
+	background-color: #1E2324 !important;
 }
 
 
-@media(max-width: 768px){
-	.room .room-media{
-		width: 50% !important;
-	}.room .room-content{
-		width: 50% !important;
-		padding-left: 20px;
+.room-features i{
+	color: #AD78F0;
+}
+.room .room-media{
+	width: 50% !important;
+	
+}
+.room .room-content{
+	width: 50% !important;
+	padding-left: 20px !important;
+}
+
+.btn-reservation{
+	background-color: #A47E1B !important;
+	border: none !important;
+}
+@media(max-width: 820px){
+	.room p.description{
+		font-size: 13px
 	}
 }
+
+@media(max-width: 700px){
+	.room.p-4{
+		flex-direction: column;
+		padding: 10px 3px !important;
+	}
+	.room .room-media{
+		width: 100% !important;
+	}.room .room-content{
+		width: 100% !important;
+		padding-left: 0px !important;
+		margin-top: 20px
+	}
+}
+
