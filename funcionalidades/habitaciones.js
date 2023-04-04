@@ -57,18 +57,53 @@ for (var response in json) {
     // Crear el DOM
 
     function mostrarHabitaciones(habitacion) {
-        let habitacionHTML = "<ul>";
-        for (let propiedad in habitacion) {
-            habitacionHTML += "<li>" + propiedad + ": " + habitacion[propiedad] + "</li>";
-        }
-        habitacionHTML += "</ul>";
-        document.getElementById("habitaciones").innerHTML += habitacionHTML;
+        let div = document.createElement("div");
+        div.className = "room-content col-md-6 justify-content-between d-flex flex-column";
+        let h3 = document.createElement("h3");
+        h3.innerHTML = Numero;
+        div.appendChild(h3);
+
+        let p = document.createElement("p");
+        p.id = "description";
+        p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Iusto aperiam assumenda facilis placeat dicta dolor explicabo repudiandae. A, consequuntur quos expedita ab praesentium sapiente perferendis, vel, esse eveniet ipsum, temporibus.";
+        div.appendChild(p);
+
+        let roomFeaturesDiv = document.createElement("div");
+        roomFeaturesDiv.className = "room-features justify-content-between";
+        roomFeaturesDiv.id = "room-reatures";
+
+        let p2 = document.createElement("p");
+        let i = document.createElement("i");
+        i.className = "fas fa-star";
+        p2.appendChild(i);
+
+        let span1 = document.createElement("span");
+        span1.id = "top";
+        span1.innerHTML = "Top Parejas";
+        p2.appendChild(span1);
+
+        roomFeaturesDiv.appendChild(p2);
+
+        let h4 = document.createElement("h4");
+        h4.innerHTML = "Desde* $" + precio;
+
+        roomFeaturesDiv.appendChild(h4);
+
+        div.appendChild(roomFeaturesDiv);
+
+        let boton = document.createElement("button");
+        boton.className = "btn -btnsuccess btn-reservation";
+        boton.innerHTML = "Iniciar Reserva";
+
+        div.appendChild(boton);
+
+        document.getElementById("room").appendChild(div);
     }
 
     mostrarHabitaciones(datos);
 }
 
-    /*
+/*
 console.log(`Numero de la habitación: ${id}`);
 console.log(`Ambientes: ${ambientes}`);
 console.log(`Precio por noche: ${precio}`);
