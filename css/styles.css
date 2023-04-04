@@ -1,0 +1,59 @@
+*{
+	font-family: sans-serif;
+}
+
+.btn-reservation{
+	background-color: #59B4C3 !important;
+	border: none !important;
+}
+.room{
+	height: 300px;
+}
+.room-media-img{
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.calification{
+	padding: 5px 17px 5px 15px !important;
+	background-color: #59B4C3;
+	position: absolute;
+	z-index: 100;
+	top: 10px;
+}
+p.description{
+	font-size: 1rem;
+}
+.calification i{
+	color: #FFD800FF;
+}
+.calification p{
+	margin: 0;
+	color: #fff;
+	font-weight: 700;
+}
+.price{
+	background-color: #007F0E;
+	position: absolute;
+	padding: 10px;
+	z-index: 101;
+	right: 0px;
+	bottom: 40px;
+	
+}
+.price h4 {
+	font-size: 1.4em;
+	margin: 0;
+	font-weight: 700;
+	color: #FFFFFF;
+}
+
+
+@media(max-width: 768px){
+	.room .room-media{
+		width: 50% !important;
+	}.room .room-content{
+		width: 50% !important;
+		padding-left: 20px;
+	}
+}

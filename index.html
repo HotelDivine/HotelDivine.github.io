@@ -19,11 +19,14 @@
         <meta property="og:url" content="https://HotelDivine.github.io" />
         
         <link rel="stylesheet" href="estilo.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+
         <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
         <script src="lib/jquery/jquery-3.4.1.min.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
         <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="images/icons/css/all.min.css">
         
     </head>
     
@@ -65,17 +68,33 @@
         </nav>
     </header>
     
-    <main>
-        <div class="wrapper">
-            <div class="container">
-                <div class="row rooms" id="rooms">
-                    <div class="col-md-3 card">
-                        <img src="imagen" alt="">
+    <main class="container-xl">
+        <div class="row rooms">
+
+            <div class="room col-md-12">
+                
+                    <div class="room inside d-flex justify-content-between p-4">
+                        <div class="room-media col-md-5">
+                            <div class="room-media-img object-fit-cover justify-content-start">
+                                <img src="images/rooms/gallery-1-1.jpg" class="w-100 h-100 object-fit-cover">
+                                <div class="calification"><p>4.2 <i class="fas fa-star"></i></p></div>
+                                <div class="price"><h4><small><small><small>Desde</small></small></small><span> 3000 </span>U$D</h4></div>
+
+                            </div>
+                        </div>
+                        <div class="room-content col-md-6 justify-content-between d-flex flex-column">
+                            <h3 class="title">Title</h3>
+                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Iusto aperiam assumenda facilis placeat dicta dolor explicabo repudiandae. A, consequuntur quos expedita ab praesentium sapiente perferendis, vel, esse eveniet ipsum, temporibus.</p>
+                            <button class="btn btn-success btn-reservation">Iniciar Reserva</button>
+                        </div>
                     </div>
-                    <div id="habitaciones"></div>
-                </div>
+                
             </div>
+
+            
+
         </div>
+            
     </main>
 <!-- <main>
     <h2>Bienvenido al Hotel Divine</h2>
@@ -101,7 +120,7 @@
             </ul>
             
         </main> -->
-        <script src="funcionalidades/habitaciones.js"></script>
+        <!-- <script src="funcionalidades/habitaciones.js"></script> -->
 </body>
 
 </html>
