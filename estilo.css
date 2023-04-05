@@ -2,6 +2,7 @@
     font-family: 'Clash Display', sans-serif;
 */
 
+
 #main-colores {
     color: #171A1B;
     color: #1E2324;
@@ -10,77 +11,20 @@
     color: #AD78F0;
 }
 
+#title-contact {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 2.25rem;
+}
+
+html {
+    font-size: 16px;
+}
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
+    box-sizing: border-box;
+    background-color: #171A1B;
+    color: #F2EDE3;
+    font-size: 1rem;
     margin: 0;
     padding: 0;
-}
-
-/* HEADER */
-header {
-    border-bottom: #333 solid 2px;
-}
-
-h1 {
-    margin: 0;
-    font-size: 36px;
-    margin-right: 48%;
-}
-
-/* NAVBAR */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav a {
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* MAIN */
-h2 {
-    font-size: 24px;
-    margin-top: 40px;
-}
-
-h3 {
-    font-size: 18px;
-    margin-top: 30px;
-}
-
-p {
-    line-height: 1.5em;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: rgb(212, 212, 212);
-
-}
-
-.hero {
-    height: 90vh;
-    background-image:  url(hero_room_darked_test.jpg);
-    background-size: cover;
-    background-position: center center;
-}
-
-.hero h1, h3, p{
-    text-shadow: rgb(0, 0, 0) 1px 0 10px;
-}
-
-.hero .rectangulo{
-    height: 8vh;
-}
-
-.hero .container{
-    height: 100%;
 }
