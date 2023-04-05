@@ -1,11 +1,24 @@
+/* FUENTE PARA TITULOS:
+    font-family: 'Clash Display', sans-serif;
+*/
+
+#main-colores {
+    color: #171A1B;
+    color: #1E2324;
+    color: #F2EDE3;
+    color: #A47E1B;
+    color: #AD78F0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #f2f2f2;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
+/* HEADER */
 header {
     border-bottom: #333 solid 2px;
 }
@@ -16,6 +29,7 @@ h1 {
     margin-right: 48%;
 }
 
+/* NAVBAR */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -33,6 +47,7 @@ nav a {
     font-size: 18px;
 }
 
+/* MAIN */
 h2 {
     font-size: 24px;
     margin-top: 40px;
