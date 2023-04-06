@@ -11,20 +11,81 @@
     color: #AD78F0;
 }
 
-#title-contact {
-    font-family: 'Clash Display', sans-serif;
-    font-size: 2.25rem;
-}
-
 html {
     font-size: 16px;
 }
 body {
     font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
     background-color: #171A1B;
     color: #F2EDE3;
+}
+* {
+    box-sizing: border-box;
     font-size: 1rem;
     margin: 0;
     padding: 0;
+}
+
+/* MAIN */
+#container-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #1E2324;
+    padding: 3.75rem 4.5rem;
+}
+
+#title-contact {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 2.25rem;
+}
+
+#form-contact {
+    height: 30.5rem;
+}
+#about-contact {
+    height: 30.5rem;
+}
+
+.line-hr {
+    display: block;
+    background-color: #171A1B;
+    height: .0625rem;
+    margin: 2rem 0;
+}
+
+.contact-titles {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about-contact__card {
+    display: flex;
+    height: 4.75rem;
+}
+
+.contact-card__img {
+    width: 4.5rem;
+    height: 4.5rem;
+    background: #fff;
+    border-radius: 3rem;
+}
+
+.contact-card__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1rem;
+}
+
+.contact-card__text p {
+    margin: 0;
+}
+.contact-card__text p:first-child {
+    font-weight: 600;
+}
+
+.card-text__smalltext {
+    font-size: .875rem;
+    color: #f2ede3c5;
 }
