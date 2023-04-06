@@ -3,7 +3,7 @@ $.ajax({
     type: "GET",
     contentType: false,
     processData: false,
-    success: function(json){
+    success: function (json) {
 
         let contenedor = document.getElementById('all-rooms');
 
@@ -14,13 +14,13 @@ $.ajax({
             let ambientes = data["ambientes"];
             let price = data["precio"];
             let vacante = data["vacante"];
-            
+
             let calificacion = data["calificacion"];
             let top = data["top"];
-            
+
             // Crear el DOM
             let room = document.createElement('div');
-            room.classList.add('room','col-md-12','pad-0');
+            room.classList.add('room', 'col-md-12', 'pad-0');
             room.innerHTML = `<div class="room inside d-flex justify-content-between p-4 container-xl">
             <div class="room-media col-md-5">
             <div class="room-media-img object-fit-cover justify-content-start">
@@ -52,10 +52,19 @@ $.ajax({
                                         <button class="btn btn-success btn-reservation">Iniciar Reserva</button>
                                         </div>
                                         </div>`;
-                                        contenedor.appendChild(room);
-                                    }
-                                }
-                                    })
+            contenedor.appendChild(room);
+
+        }
+            let botones = document.querySelectorAll(".btn-reservation");
+
+            botones.forEach(function (boton) {
+                boton.addEventListener("click", mostrarAlerta);
+            });
+            function mostrarAlerta() {
+                alert("¡Reserva iniciada!");
+            }
+    }
+    })
 
     // function mostrarHabitaciones(habitacion) {
     //     let div = document.createElement("div");
