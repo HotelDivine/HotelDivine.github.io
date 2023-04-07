@@ -1,5 +1,5 @@
 $.ajax({
-    url: 'http://127.0.0.1:5500/funcionalidades/habitaciones.json',
+    url: 'funcionalidades/habitaciones.json',
     type: "GET",
     contentType: false,
     processData: false,
