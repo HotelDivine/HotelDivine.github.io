@@ -1,0 +1,195 @@
+/*gold: A47E1B
+violet: AD78F0
+darkblue: 171A1B
+lightblue: 1E2324
+light: F2EDE3*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Clash Display', sans-serif;
+}
+
+/*:::SERVICES:::*/
+
+.services{
+    position: absolute;
+    width: 100%;
+    background-color: #1E2324;
+    background-image: url(logo.svg);
+    background-repeat: no-repeat;
+    background-size: 35rem;
+    background-position: 95% -300px;
+}
+
+.services .grupo-1 {
+    position: relative;
+    max-width: 75rem;
+    margin: 0 10%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3.125rem;
+    color:#F2EDE3;
+    padding: 2.8125rem 0rem;
+}
+
+.services .grupo-1 h2{
+    font-size: 1.875rem;
+    font-weight: 500;
+    width: 22.375rem;
+    height: 2.75rem;
+}
+
+.services .grupo-1 p{
+    position: relative;
+    font-size: .875rem;
+}
+
+.services .grupo-2 {
+   width: 19.1875rem;
+    margin: 0 10%;
+    margin-bottom: 1.875rem;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3.125rem;
+}
+
+
+.services .grupo-2 img{
+    width: 19.1875rem;
+    height: 26rem;
+    transition: all 400ms ease-out;
+    object-fit: cover;
+    object-position: 60%;
+}
+
+.services .grupo-2 .box{
+    position: relative;
+    margin-bottom: 2.8125rem;
+    width: 19.1875rem;
+    height: 26rem;
+    transition: all 300ms ease;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 1.25rem;
+}
+
+.services .grupo-2 .box:hover{
+    filter: drop-shadow(1px 1px 10px #A47E1B);
+}
+
+.bi-star-fill{
+    color: #A47E1B;
+}
+
+.services .grupo-2 .box .h4-g2{
+    width: auto;
+    position: absolute;
+    background-color: #1E2324;
+    color: #F2EDE3;
+    padding: .5rem;
+    font-size: 1rem;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px 0 0 0;
+}
+
+.services .grupo-2 .box .hover-box{
+    color: #F2EDE3;
+    background-color: hsl(0, 0%, 0%, 0.8);
+    width: 19.25rem;
+    height: 26rem;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 500ms ease;
+
+}
+.services .grupo-2 .box .hover-box:hover{
+    opacity: 1;
+}
+
+.services .grupo-2 .box .hover-box .restaurant-hover{
+    font-weight: 700;
+    margin-bottom: .9375rem;
+    transition: all 400ms ease-out;
+    margin-top: 100px;
+    font-size: 1.5625rem;
+}
+
+.services .grupo-2 .box .hover-box .p-hover{
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+    margin-top: .875rem;
+}
+
+
+/*:::Services Responsive Tsblet:::*/
+
+@media screen and (max-width:1199px){
+    .services .grupo-1 {
+        margin: 0 12%;
+    }
+
+    .services .grupo-2{
+        margin: auto;
+        position: relative;
+        width: 688px;    
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1.875rem;
+        padding: 2.1875rem 0rem;
+    }
+    .services .grupo-2 .box{
+        width: 42.5rem;
+        height: 18.75rem;
+        
+    }
+    .services .grupo-2 img{
+        width: 43rem;
+        height: 18.75rem;
+        transition: all 400ms ease-out;
+        object-fit: cover;
+        object-position: 0 60%;
+    }
+    .services .grupo-2 .box .hover-box{
+        width: 43.0625rem;
+    }
+}
+
+/*:::Services Movile:::*/
+
+ @media screen and (max-width:690px){
+    .services .grupo-1 {
+        margin: 0 12%;
+    }
+
+    .services .grupo-2{
+        position: relative;
+        width: 24.25rem;     
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1.875rem;
+        padding: 2.1875rem 0rem;
+    }
+    .services .grupo-2 .box{
+        position: relative;
+        margin: auto;
+        width: 21.125rem;
+        height: 18.75rem;
+        
+    }
+    .services .grupo-2 img{
+        width: 21.125rem;
+        height: 18.75rem;
+        transition: all 400ms ease-out;
+        object-fit: cover;
+        object-position: right;
+    }
+   
+}
