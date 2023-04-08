@@ -18,16 +18,17 @@
     <meta property="og:image" content="https://HotelDivine.github.io/images/logo.png" />
     <meta property="og:url" content="https://HotelDivine.github.io" />
 
-    <link rel="stylesheet" href="estilo.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-
+    <!-- Importacion de Bootstrap -->
+    <link rel="stylesheet" href="images/icons/css/all.min.css">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
     <script src="lib/jquery/jquery-3.4.1.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="images/icons/css/all.min.css">
-
+    
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -73,26 +74,168 @@
                 <div class="room-title container-xl">
                     <h2>Selección de habitaciones</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Tempora possimus nobis dolor numquam aut. Tenetur, culpa, veritatis. Et magni beatae, itaque, deserunt magnam facere tempore iste. Perferendis provident dolore repellat.</p>
-                    
                 </div>
-
             </div>
-            <div class="all-rooms" id="all-rooms">
-                
-                
-            </div>
-            
-
-            
-
+            <div class="all-rooms" id="all-rooms"> </div>
         </div>
-            
     </main>
+
+    <!-- MODALES -->
+    <!--======= Form Cotizacion =======-->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Cotización</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Body / form -->
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between align-items-center mx-3">
+                        <h2 class="modal-body-title m-0">Escoger estancia</h2>
+                        <p class="modal-body-total m-0">
+                            Total $
+                            <span id="PRECIO-TOTAL">0,00</span>
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="modal-body-content d-flex flex-column mx-3">
+                        <!-- Personas y habitaciones -->
+                        <div class="d-flex g-3 justify-content-between align-items-center">
+                            <p class="m-0 mt-2 align-self-start label-cotizacion">Personas y habitaciones</p>
+                            <div class="accordion accordion-width" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            Personas y habitaciones
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                        <div class="accordion-body">
+                                            <div class="d-flex g-3 align-items-center justify-content-between mx-3">
+                                                <div class="d-flex flex-column">
+                                                    <label for="inputNumber1" class="d-block p-0 label-pple-room" aria-describedby="passwordHelpInline">Habitaciones</label>
+                                                    <span id="passwordHelpInline" class="form-text">
+                                                        Máx. 4 habitaciones
+                                                    </span>
+                                                </div>
+                                                <input type="number" id="inputNumber1" class="form-control room-width-input" max="4" min="0">
+                                            </div>
+                                            <hr>
+                                            <div class="d-flex g-3 align-items-center justify-content-between mx-3">
+                                                <div class="d-flex flex-column">
+                                                    <label for="inputNumber1" class="d-block p-0 label-pple-room" aria-describedby="passwordHelpInline">Mayores</label>
+                                                    <span id="passwordHelpInline" class="form-text">
+                                                        Máx. 8 personas en total
+                                                    </span>
+                                                </div>
+                                                <input type="number" id="inputNumber1" class="form-control room-width-input" max="8" min="0">
+                                            </div>
+                                            <hr>
+                                            <div class="d-flex g-3 align-items-center justify-content-between mx-3">
+                                                <div class="d-flex flex-column">
+                                                    <label for="inputNumber1" class="d-block p-0 label-pple-room" aria-describedby="passwordHelpInline">Menores</label>
+                                                    <span id="passwordHelpInline" class="form-text">
+                                                        Máx. 8 personas en total
+                                                    </span>
+                                                </div>
+                                                <input type="number" id="inputNumber1" class="form-control room-width-input" max="8" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cantidad de dias -->
+                        <div class="d-flex g-3 justify-content-between align-items-center">
+                            <label for="inputDate" class="label-cotizacion">Cantidad de días</label>
+                            <div class="d-flex">
+                                <div class="p-0 me-3">
+                                    <input type="date" id="inputDate" class="form-control input-date">
+                                </div>
+                                <div class="p-0">
+                                    <input type="date" id="inputDate" class="form-control input-date">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Extras a añadir -->
+                        <div class="d-flex g-3 justify-content-between align-items-center">
+                            <label for="inputDate" class="label-cotizacion">Extras a añadir</label>
+                            <div class="d-flex justify-content-between">
+                                <div class="form-check d-inline me-3">
+                                    <input type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Estacionamiento
+                                    </label>
+                                </div>
+                                <div class="form-check d-inline me-3">
+                                    <input type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Gimnasio
+                                    </label>
+                                </div>
+                                <div class="form-check d-inline">
+                                    <input type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Spa
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer / botones -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-gold" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--======= Form Datos =======-->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Datos personales</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Body / form -->
+                <div class="modal-body">
+                    CONTENIDO
+                </div>
+                <!-- Footer / botones -->
+                <div class="modal-footer">
+                    <button class="btn btn-dark" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Volver</button>
+                    <button class="btn btn-gold" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--======= Form Resumen =======-->
+    <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">Resumen</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Body / form -->
+                <div class="modal-body">
+                    CONTENIDO
+                </div>
+                <!-- Footer / botones -->
+                <div class="modal-footer">
+                    <button class="btn btn-dark" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- <main class="container-xl">
         <div class="row rooms">
-
             <div class="room col-md-12">
-
                 <div class="room inside d-flex justify-content-between p-4">
                     <div class="room-media col-md-5">
                         <div class="room-media-img object-fit-cover justify-content-start">
@@ -107,18 +250,10 @@
 
                         </div>
                     </div>
-
                     <div id="room">
-
                     </div>
-
-
                 </div>
-
-
-
             </div>
-
     </main> -->
     <!-- <main>
     <h2>Bienvenido al Hotel Divine</h2>

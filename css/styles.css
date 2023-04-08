@@ -1,17 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
 	overflow-x: hidden !important;
 	width: 100vw !important;
 	margin: 0px !important;
-}
-.row{
-	margin: 0 !important;
-	padding: 0 !important;
-}
-*{
-	font-family: sans-serif;
-}
-.mb-16{
-	margin-bottom: 16px;
 }
 
 .room{
@@ -56,9 +51,10 @@ p.top{
 .rooms .col-md-12{
 	padding: 0 auto !important;
 }
-.rooms *{
+.rooms * {
 	color: #F2EDE3;
 }
+
 .room:nth-child(even),
 .room-title:nth-child(even){
 	background-color: #171A1B !important;
@@ -69,7 +65,6 @@ p.top{
 .rooms:not(:nth-child(even)){
 	background-color: #1E2324 !important;
 }
-
 
 .room-features i{
 	color: #AD78F0;
@@ -83,10 +78,104 @@ p.top{
 	padding-left: 20px !important;
 }
 
-.btn-reservation{
-	background-color: #A47E1B !important;
-	border: none !important;
+.btn-gold {
+    background-color: #A47E1B;
+    color: #F2EDE3;
+    font-weight: 400;
 }
+.btn-gold:hover {
+    background-color: #a47d1bd3;
+    color: #F2EDE3;
+}
+
+/* Modal body */
+.modal-body-content {
+    margin: 1rem;
+}
+
+.modal-body-title {
+    display: inline;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.modal-body-total {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: end;
+}
+
+.btn-rooms {
+    border: 1px solid #dee2e6;
+}
+.btn-rooms:hover {
+    border: 1px solid #dee2e6;
+}
+
+#modal-container {
+    background-color: #fff;
+    max-width: 49.875rem;
+    height: auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+    margin: auto;
+}
+
+.modal-body-content {
+    margin: 2.9375rem 0;
+    row-gap: 2.5rem;
+}
+
+.modal-body-title {
+    display: inline;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.modal-body-total {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: end;
+}
+
+.form-check {
+    border: 1px solid #dee2e6;
+    padding: .375rem .75rem;
+    border-radius: .375rem;
+}
+
+.accordion-width {
+    width: 60%;
+}
+
+.accordion-button {
+    padding: .5625rem .75rem;
+}
+
+.label-cotizacion {
+    font-weight: 500;
+}
+
+/* Estilos 'Personas y Habitaciones' */
+
+.label-pple-room {
+    font-weight: 500;
+}
+
+.room-width-input {
+    width: 7.5rem;
+}
+
+.input-date {
+    width: 12.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 700px) {
+    .input-date {
+        width: auto;
+    }
+}
+
 @media(max-width: 820px){
 	.room p.description{
 		font-size: 13px
