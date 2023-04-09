@@ -3,13 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-	overflow-x: hidden !important;
-	width: 100vw !important;
-	margin: 0px !important;
+body {
+	/* overflow-x: hidden !important; */
+	background-color: #171A1B;
+	width: 100vw;
 }
 
-.room{
+.btn-gold {
+    background-color: #A47E1B;
+    color: #F2EDE3;
+    font-weight: 400;
+}
+.btn-gold:hover {
+    background-color: #a47d1bd3;
+    color: #F2EDE3;
+}
+
+/* SECCION HABITACIONES */
+.room {
 	height: auto;
 }
 .room-media-img{
@@ -57,13 +68,10 @@ p.top{
 
 .room:nth-child(even),
 .room-title:nth-child(even){
-	background-color: #171A1B !important;
+	background-color: #1E2324;
 }
 .room-title{
-	padding: 50px 0 30px;
-}
-.rooms:not(:nth-child(even)){
-	background-color: #1E2324 !important;
+	padding: 2rem 0;
 }
 
 .room-features i{
@@ -78,17 +86,7 @@ p.top{
 	padding-left: 20px !important;
 }
 
-.btn-gold {
-    background-color: #A47E1B;
-    color: #F2EDE3;
-    font-weight: 400;
-}
-.btn-gold:hover {
-    background-color: #a47d1bd3;
-    color: #F2EDE3;
-}
-
-/* Modal body */
+/* MODAL BODY */
 .modal-body-content {
     margin: 1rem;
 }
