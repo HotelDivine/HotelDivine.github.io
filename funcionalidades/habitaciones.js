@@ -28,8 +28,9 @@ $.ajax({
                         <img src="images/rooms/gallery-1-1.jpg" class="w-100 h-100 object-fit-cover" id="room-image">
                         <div class="calification">
                             <p>
-                            <span id="calification">${calificacion}</span>
-                            <i class="fas fa-star"></i></p>
+                                <span id="calification">${calificacion}</span>
+                                <i class="bi bi-star-fill"></i>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -38,7 +39,7 @@ $.ajax({
                     <p class="description" id="description">${description}</p>
                     <div class="room-features justify-content-between d-flex" id="room-reatures">
                         <div class="justify-content-between d-flex align-items-center prices mb-3">
-                            <i class="fa-solid fa-bookmark"></i>&nbsp;
+                            <i class="bi bi-bookmark-star-fill"></i>&nbsp;
                             <span id="top">Top ${top}</span>
                         </div>
                         <div class="justify-content-between d-flex align-items-center prices mb-3">
