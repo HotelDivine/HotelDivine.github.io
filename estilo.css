@@ -3,17 +3,22 @@
 */
 
 #main-colores {
-    color: #171A1B;
-    color: #1E2324;
-    color: #F2EDE3;
-    color: #A47E1B;
-    color: #AD78F0;
+    color: #171a1b;
+    color: #1e2324;
+    color: #f2ede3;
+    color: #a47e1b;
+    color: #ad78f0;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #171A1B;
-    color: #F2EDE3;
+    font-family: "Inter", sans-serif;
+    background-color: #171a1b;
+    color: #f2ede3;
     margin: 0;
     padding: 0;
 }
@@ -63,24 +68,52 @@ p {
     margin-top: 20px;
     margin-bottom: 20px;
     color: rgb(212, 212, 212);
-
 }
+
+/* HERO */
 
 .hero {
     height: 90vh;
-    background-image:  url(hero_room_darked_test.jpg);
+    background-image: url(hero_room_darked_test.jpg);
     background-size: cover;
     background-position: center center;
 }
 
-.hero h1, h3, p{
+.hero h1,
+h3,
+p {
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
 
-.hero .rectangulo{
+.hero .rectangulo {
     height: 8vh;
 }
 
-.hero .container{
+.hero .container {
     height: 100%;
+}
+
+/* INTRO */
+
+#intro {
+    height: 75vh;
+}
+
+#intro .info {
+    height: 60vh;
+    max-width: 600px;
+}
+
+#intro p {
+    margin: 0px;
+}
+#intro h1 {
+    margin: 0px;
+}
+
+#intro .img-intro {
+    width: 500px;
+    background: url(images/francesca-tosolini-9dyitA0YIHE-unsplash.jpg) center
+        center no-repeat;
+    background-size: cover;
 }
