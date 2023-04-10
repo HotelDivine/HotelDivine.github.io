@@ -96,7 +96,7 @@ p {
 /* INTRO */
 
 #intro {
-    height: 75vh;
+    min-height: 75vh;
 }
 
 #intro .info {
@@ -107,13 +107,25 @@ p {
 #intro p {
     margin: 0px;
 }
+
+@media (max-width: 576px) {
+    #intro .txt-icon {
+        text-align: center;
+    }
+}
+
 #intro h1 {
     margin: 0px;
+    max-width: 400px;
 }
 
 #intro .img-intro {
-    width: 500px;
+    height: clamp(294px, 35vw, 489px);
+    aspect-ratio: 3/4;
     background: url(images/francesca-tosolini-9dyitA0YIHE-unsplash.jpg) center
         center no-repeat;
     background-size: cover;
 }
+
+/* width: clamp(221px, 20.3vw, 336px);
+    aspect-ratio: 3/4; */
