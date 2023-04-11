@@ -31,6 +31,9 @@
     <!-- Estilos propios -->
     <link rel="stylesheet" href="estilo.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script> -->
+    <script src="https://underscorejs.org/underscore-min.js"></script>
+    <script src="lib/validatejs/validate.js"></script>
 </head>
 
 <body>
@@ -71,6 +74,10 @@
         </nav>
     </header>
     <main>
+        <form action="" name="formulario">
+            <input type="text" name="nombre">
+            <input type="submit">
+        </form>
         <div class="row rooms">
             <div class="col-md-12 pad-0">
                 <div class="room-title container-xl">
@@ -86,6 +93,7 @@
 
     <!-- MODALES -->
     <!--======= Form Cotizacion =======-->
+    <form action="" id="formModal" method="post" novalidate>
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
         tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -121,16 +129,17 @@
                                     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="panelsStayOpen-headingTwo">
                                         <div class="accordion-body">
-                                            <div class="d-flex g-3 align-items-center justify-content-between mx-3">
+                                            <div class="d-flex g-3 align-items-center justify-content-between mx-3 input-val">
                                                 <div class="d-flex flex-column">
                                                     <label for="inputNumber1" class="d-block p-0 label-pple-room"
                                                         aria-describedby="passwordHelpInline">Habitaciones</label>
                                                     <span id="passwordHelpInline" class="form-text">
                                                         Máx. 4 habitaciones
                                                     </span>
+                                                    <p class="messages"></p>
                                                 </div>
                                                 <input type="number" id="inputNumber1"
-                                                    class="form-control room-width-input" max="4" min="0">
+                                                    class="form-control room-width-input" max="4" min="0" name="inputNumber1" required>
                                             </div>
                                             <hr>
                                             <div class="d-flex g-3 align-items-center justify-content-between mx-3">
@@ -250,10 +259,11 @@
                             <label for="inputEmail3" class="col-lg-5 label-cotizacion col-form-label">Correo
                                 electrónico</label>
                             <div class="col-lg-7">
-                                <div class="row g-3">
+                                <div class="row g-3 input-val">
                                     <i class="bi bi-envelope-at-fill col-1 align-self-center icon-datos-pers"></i>
                                     <input type="email" class="form-control col" id="inputEmail3"
                                         placeholder="ejemplo123@email.com">
+                                        <p class="messages"></p>
                                 </div>
                             </div>
                         </div>
@@ -525,6 +535,8 @@
             </div>
         </div>
     </div>
+    </form>
+    <script src="funcionalidades/validar.js"></script>
     <script>
         const btnSiguiente = document.querySelector('#exampleModalToggle2 .btn.btn-gold');
         btnSiguiente.addEventListener('click', function (event) {
