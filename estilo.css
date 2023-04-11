@@ -93,7 +93,25 @@ p {
 #comments .circle{
     margin: 0px;
     background: #F2EDE3;
-    max-width: 50px;
+    width: 50px;
     aspect-ratio: 1/1;
     border-radius: 50%;
+}
+
+#comments h2{
+    font-family: 'Clash Display', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    width: 336px;
+}
+
+#comments h3{
+    padding-top: 1px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+#comments .info-comment{
+    display: flex;
 }
