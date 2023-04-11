@@ -29,11 +29,17 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <!-- Importando Fuentes -->
-        <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <link
+            href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
         <!-- Main CSS -->
         <link rel="stylesheet" href="estilo.css" />
-        
+
         <script src="lib/jquery/jquery-3.4.1.min.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
         <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -41,7 +47,7 @@
 
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
                     <h1><a class="navbar-brand" href="#">LOGO</a></h1>
                     <button
@@ -102,58 +108,116 @@
 
         <main>
             <section class="hero">
-                <div class="container d-flex flex-column justify-content-between">
+                <div
+                    class="container d-flex flex-column justify-content-between"
+                >
                     <div class="row"></div>
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <div class="info text-light">
                                 <h1>Divine Hotel</h1>
                                 <h3>Sea Bienvenido</h3>
-                                <div class="info"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p></div>
+                                <div class="info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                    </p>
+                                </div>
                             </div>
                             <a href="#" class="btn btn-dark">Ver Servicios</a>
-                            <a href="#" class="btn btn-secondary">Sobre nosotros</a>
+                            <a href="#" class="btn btn-secondary"
+                                >Sobre nosotros</a
+                            >
                         </div>
-                        
                     </div>
                     <div class="rectangulo row bg-white rounded-top-4"></div>
                 </div>
             </section>
-            <div class="wrapper">
+
+            <!--COMENTARIOS-->
+            <section id="comments">
                 <div class="container">
-                    <div class="row rooms" id="rooms">
-                        <div class="col-md-3 card">
-                            <img src="imagen" alt="" />
+                    <h2>Opiniones de nuestros clientes</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing.
+                        Accusamus vero corporis ab!
+                    </p>
+                    <div class="main-comments">
+                        <h3>4,7</h3>
+                        <div class="stars">
+                            <svg
+                                width="25"
+                                height="25"
+                                viewBox="0 0 25 25"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.43922 24.4088C4.86022 24.7256 4.20322 24.1704 4.32022 23.4616L5.56522 15.8939L0.280734 10.5245C-0.212765 10.0221 0.0437345 9.10371 0.705233 9.00452L8.05221 7.89095L11.3282 0.967984C11.6237 0.344005 12.4232 0.344005 12.7187 0.967984L15.9947 7.89095L23.3417 9.00452C24.0032 9.10371 24.2597 10.0221 23.7647 10.5245L18.4817 15.8939L19.7267 23.4616C19.8437 24.1704 19.1867 24.7256 18.6077 24.4088L12.0212 20.7993L5.43922 24.4088Z"
+                                    fill="#A47E1B"
+                                />
+                            </svg>
+                            <svg
+                                width="25"
+                                height="25"
+                                viewBox="0 0 25 25"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.43922 24.4088C4.86022 24.7256 4.20322 24.1704 4.32022 23.4616L5.56522 15.8939L0.280734 10.5245C-0.212765 10.0221 0.0437345 9.10371 0.705233 9.00452L8.05221 7.89095L11.3282 0.967984C11.6237 0.344005 12.4232 0.344005 12.7187 0.967984L15.9947 7.89095L23.3417 9.00452C24.0032 9.10371 24.2597 10.0221 23.7647 10.5245L18.4817 15.8939L19.7267 23.4616C19.8437 24.1704 19.1867 24.7256 18.6077 24.4088L12.0212 20.7993L5.43922 24.4088Z"
+                                    fill="#A47E1B"
+                                />
+                            </svg>
+                            <svg
+                                width="25"
+                                height="25"
+                                viewBox="0 0 25 25"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.43922 24.4088C4.86022 24.7256 4.20322 24.1704 4.32022 23.4616L5.56522 15.8939L0.280734 10.5245C-0.212765 10.0221 0.0437345 9.10371 0.705233 9.00452L8.05221 7.89095L11.3282 0.967984C11.6237 0.344005 12.4232 0.344005 12.7187 0.967984L15.9947 7.89095L23.3417 9.00452C24.0032 9.10371 24.2597 10.0221 23.7647 10.5245L18.4817 15.8939L19.7267 23.4616C19.8437 24.1704 19.1867 24.7256 18.6077 24.4088L12.0212 20.7993L5.43922 24.4088Z"
+                                    fill="#A47E1B"
+                                />
+                            </svg>
+                            <svg
+                                width="25"
+                                height="25"
+                                viewBox="0 0 25 25"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.43922 24.4088C4.86022 24.7256 4.20322 24.1704 4.32022 23.4616L5.56522 15.8939L0.280734 10.5245C-0.212765 10.0221 0.0437345 9.10371 0.705233 9.00452L8.05221 7.89095L11.3282 0.967984C11.6237 0.344005 12.4232 0.344005 12.7187 0.967984L15.9947 7.89095L23.3417 9.00452C24.0032 9.10371 24.2597 10.0221 23.7647 10.5245L18.4817 15.8939L19.7267 23.4616C19.8437 24.1704 19.1867 24.7256 18.6077 24.4088L12.0212 20.7993L5.43922 24.4088Z"
+                                    fill="#A47E1B"
+                                />
+                            </svg>
+                            <svg
+                                width="27"
+                                height="25"
+                                viewBox="0 0 27 25"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9.21171 7.89021L12.6599 0.967188C12.7261 0.827917 12.8296 0.710288 12.9586 0.627692C13.0875 0.545096 13.2368 0.500853 13.3893 0.5C13.6783 0.5 13.9672 0.655196 14.1235 0.967188L17.5717 7.89021L25.3049 9.00378C25.4977 9.03449 25.6741 9.13164 25.8044 9.27883C25.9347 9.42602 26.0109 9.61425 26.0202 9.81176C26.0312 9.94326 26.0128 10.0756 25.9663 10.1989C25.9198 10.3221 25.8465 10.4332 25.7518 10.5237L20.1895 15.8932L21.4999 23.461C21.6231 24.1698 20.9315 24.725 20.3221 24.4082L13.3893 20.7987L6.45977 24.4082C6.38729 24.4463 6.30959 24.4733 6.22926 24.4882C5.68929 24.5842 5.17459 24.0818 5.28195 23.461L6.59239 15.8932L1.03168 10.5237C0.945232 10.4409 0.876517 10.3409 0.829802 10.2299C0.783086 10.119 0.759368 9.99956 0.760119 9.87896C0.760201 9.70846 0.806634 9.54128 0.894321 9.39577C0.956526 9.29029 1.04131 9.2003 1.14242 9.13246C1.24353 9.06461 1.35838 9.02064 1.4785 9.00378L9.21171 7.89021ZM13.3893 18.9427C13.5168 18.9422 13.6425 18.9729 13.7556 19.0323L19.5753 22.0627L18.4796 15.7316C18.4537 15.586 18.4635 15.4362 18.5081 15.2953C18.5527 15.1544 18.6307 15.0268 18.7353 14.9236L23.3251 10.4917L16.9276 9.57017C16.7951 9.5499 16.6694 9.49739 16.5614 9.41714C16.4533 9.33688 16.366 9.23128 16.3071 9.10938L13.3909 3.25673L13.3893 3.26153V18.9411V18.9427Z"
+                                    fill="#A47E1B"
+                                />
+                            </svg>
                         </div>
-                        <div id="habitaciones"></div>
+                        <p>28 reseñas</p>
+                        <hr>
+                        <div class="usr-comment"></div>
                     </div>
+
                 </div>
-            </div>
+            </section>
         </main>
-        <!-- <main>
-    <h2>Bienvenido al Hotel Divine</h2>
-    
-    <p>En nuestro hotel, nos esforzamos por garantizarle una experiencia inolvidable. Contamos con un equipo amable y servicial que estará a su disposición en todo momento para brindarle la asistencia que necesite. Además, nuestras habitaciones están diseñadas para brindarle la máxima comodidad y relajación durante su estadía. Ofrecemos una amplia variedad de servicios y comodidades para asegurarnos de que tenga todo lo que necesita a su alcance. Desde nuestro delicioso desayuno hasta nuestra piscina al aire libre, estamos seguros de que encontrará todo lo necesario para disfrutar al máximo de sus vacaciones en nuestro hotel.</p>
-    
-    <p>El Hotel Divine es un hotel de lujo ubicado en el corazón de la ciudad. Ofrecemos habitaciones cómodas y
-        elegantes, así como una amplia variedad de servicios para nuestros huéspedes.</p>
-        
-        <h3>Nuestras habitaciones</h3>
-        
-        <p>Todas nuestras habitaciones están equipadas con aire acondicionado, televisión por cable y acceso a Internet
-            de alta velocidad. También ofrecemos servicio de habitaciones las 24 horas del día.</p>
-            
-            <h3>Contacto</h3>
-            
-            <p>Si desea hacer una reserva o tiene alguna pregunta, no dude en ponerse en contacto con nosotros.</p>
-            
-            <ul>
-                <li>Teléfono: 1111-1234</li>
-                <li>Correo electrónico: info@hoteldivine.com</li>
-                <li>Dirección: 123 Main Street, Ciudad, Estado ZIP</li>
-            </ul>
-            
-        </main> -->
+
         <script src="funcionalidades/habitaciones.js"></script>
     </body>
 </html>

@@ -12,7 +12,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f2f2f2;
+    background-color: #171A1B;
     color: #333;
     margin: 0;
     padding: 0;
@@ -30,6 +30,7 @@ h1 {
 }
 
 /* NAVBAR */
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -42,7 +43,6 @@ nav li {
 }
 
 nav a {
-    color: black;
     text-decoration: none;
     font-size: 18px;
 }
@@ -83,4 +83,9 @@ p {
 
 .hero .container{
     height: 100%;
+}
+
+/* COMENTARIOS */
+#comments{
+    color: #F2EDE3;
 }
