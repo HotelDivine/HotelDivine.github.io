@@ -1,5 +1,6 @@
 /* Iconos bootstrap */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 /* Editando html */
 * {
@@ -11,6 +12,7 @@ body {
 	/* overflow-x: hidden !important; */
 	background-color: #171A1B;
 	width: 100vw;
+    font-family: 'Inter', sans-serif;
 }
 
 .btn-gold {
@@ -164,6 +166,25 @@ p.top{
 .icon-datos-pers {
     font-size: 1rem;
     color: #1e2324d2;
+}
+
+/* MODAL Resumen */
+
+.total-class-resume {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.vr-style {
+    height: 100%;
+}
+
+.fs-18 {
+    font-size: 1.125rem;
+}
+
+.class-day-resume {
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 /* MEDIA QUERIES */
