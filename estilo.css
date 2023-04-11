@@ -89,3 +89,11 @@ p {
 #comments{
     color: #F2EDE3;
 }
+
+#comments .circle{
+    margin: 0px;
+    background: #F2EDE3;
+    max-width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
