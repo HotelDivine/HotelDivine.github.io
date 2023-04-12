@@ -22,7 +22,7 @@ $.ajax({
             let room = document.createElement('div');
             room.classList.add('room', 'col-md-12', 'pad-0');
             room.innerHTML = `
-            <div class="room inside d-flex justify-content-between p-4 container-xl">
+            <div class="room inside d-flex justify-content-between py-4 px-5 container-xl">
                 <div class="room-media col-md-5">
                     <div class="room-media-img object-fit-cover justify-content-start">
                         <img src="images/rooms/gallery-1-1.jpg" class="w-100 h-100 object-fit-cover" id="room-image">
