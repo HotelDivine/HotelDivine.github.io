@@ -1,52 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Hotel Divine</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="En nuestro hotel, nos esforzamos por garantizarle una experiencia inolvidable. Contamos con un equipo amable y servicial que estará a su disposición en todo momento para brindarle la asistencia que necesite." />
-    <meta name="author" content="Katia, Nando, Matias, Diego y el otro" />
-    <link rel="icon" type="image/x-icon" href="images/logo.png" />
-    <meta name="theme-color" content="#EAEBAAFF" />
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Hotel Divine" />
-    <meta property="og:description"
-        content="En nuestro hotel, nos esforzamos por garantizarle una experiencia inolvidable. Contamos con un equipo amable y servicial que estará a su disposición en todo momento para brindarle la asistencia que necesite." />
-    <meta property="og:image" content="https://HotelDivine.github.io/images/logo.png" />
-    <meta property="og:url" content="https://HotelDivine.github.io" />
+    <link rel="icon" href="img/isotipo.svg" type="image/x-icon">
+
+    <title>Hotel Divine</title>
 
     <!-- Importacion de Bootstrap -->
-    <link rel="stylesheet" href="images/icons/css/all.min.css">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
-    <!-- Importacion de JQuery -->
-    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+    <!-- Importando Fuentes -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="estilo.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <main>
-        <div class="row rooms">
-            <div class="col-md-12 p-0">
-                <div class="room-title container-xl">
-                    <h2 class="m-0 mb-3">Selección de habitaciones</h2>
-                    <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Tempora possimus nobis
-                        dolor numquam aut. Tenetur, culpa, veritatis. Et magni beatae, itaque, deserunt magnam facere
-                        tempore iste. Perferendis provident dolore repellat.</p>
-                </div>
-            </div>
-            <div class="col-md-12 all-rooms p-0" id="all-rooms"></div>
+    <section>
+        <div class="room-description">
+            <h2 id="title-rooms">Seleccion de habitaciones</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, officia! A, ullam enim autem atque natus veniam id quasi neque minima voluptates iure veritatis dicta cum magnam officia harum facilis.
+            </p>
         </div>
-    </main>
+        <div id="all-rooms" class="room-container d-flex flex-column justify-content-center"></div>
+    </section>
 
     <!-- MODALES -->
     <!--======= Form Cotizacion =======-->
@@ -171,7 +154,7 @@
                 <!-- Footer / botones -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                    <button class="btn btn-gold" data-bs-target="#exampleModalToggle2"
+                    <button class="btn modal-btn-gold" data-bs-target="#exampleModalToggle2"
                         data-bs-toggle="modal">Siguiente</button>
                 </div>
             </div>
@@ -483,32 +466,12 @@
                 <div class="modal-footer">
                     <button class="btn btn-dark" data-bs-target="#exampleModalToggle"
                         data-bs-toggle="modal">Volver</button>
-                    <button class="btn btn-gold" data-bs-target="#exampleModalToggle3"
+                    <button class="btn modal-btn-gold" data-bs-target="#exampleModalToggle3"
                         data-bs-toggle="modal">Siguiente</button>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        const btnSiguiente = document.querySelector('#exampleModalToggle2 .btn.btn-gold');
-        btnSiguiente.addEventListener('click', function (event) {
-            event.preventDefault();
-            const inputNombre = document.getElementById('nombre');
-            const inputApellido = document.getElementById('apellido');
-            const inputEmail = document.getElementById('inputEmail3');
-            const inputPais = document.getElementById('inputState');
-            const nombre = inputNombre.value.trim();
-            const apellido = inputApellido.value.trim();
-            const pais = inputPais.value.trim();
-            const email = inputEmail.value.trim();
-
-            if (nombre == "" || apellido == "" || pais == "Seleccionar..." || email == "") {
-                alert('Por favor, complete todos los campos.');
-                return;
-            }
-            // agregar código para enviar el formulario si todos los campos son válidos
-        });
-    </script>
     <!--======= Form Resumen =======-->
     <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -569,7 +532,7 @@
                             <i class="bi bi-printer-fill"></i>
                             <span class="d-none d-sm-inline">Imprimir comprobante</span>
                         </button>
-                        <button type="button" class="btn btn-gold">
+                        <button type="button" class="btn modal-btn-gold">
                             Enviar
                         </button>
                     </div>
@@ -578,56 +541,12 @@
         </div>
     </div>
 
-    <!-- <main class="container-xl">
-        <div class="row rooms">
-            <div class="room col-md-12">
-                <div class="room inside d-flex justify-content-between p-4">
-                    <div class="room-media col-md-5">
-                        <div class="room-media-img object-fit-cover justify-content-start">
-                            <img src="images/rooms/gallery-1-1.jpg" class="w-100 h-100 object-fit-cover"
-                                id="room-image">
-                            <div class="calification">
-                                <p>
-                                    <span id="calification">4.2</span>
-                                    <i class="fas fa-star"></i>
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="room">
-                    </div>
-                </div>
-            </div>
-    </main> -->
-    <!-- <main>
-    <h2>Bienvenido al Hotel Divine</h2>
-    
-    <p>En nuestro hotel, nos esforzamos por garantizarle una experiencia inolvidable. Contamos con un equipo amable y servicial que estará a su disposición en todo momento para brindarle la asistencia que necesite. Además, nuestras habitaciones están diseñadas para brindarle la máxima comodidad y relajación durante su estadía. Ofrecemos una amplia variedad de servicios y comodidades para asegurarnos de que tenga todo lo que necesita a su alcance. Desde nuestro delicioso desayuno hasta nuestra piscina al aire libre, estamos seguros de que encontrará todo lo necesario para disfrutar al máximo de sus vacaciones en nuestro hotel.</p>
-    
-    <p>El Hotel Divine es un hotel de lujo ubicado en el corazón de la ciudad. Ofrecemos habitaciones cómodas y
-        elegantes, así como una amplia variedad de servicios para nuestros huéspedes.</p>
-        
-        <h3>Nuestras habitaciones</h3>
-        
-        <p>Todas nuestras habitaciones están equipadas con aire acondicionado, televisión por cable y acceso a Internet
-            de alta velocidad. También ofrecemos servicio de habitaciones las 24 horas del día.</p>
-            
-            <h3>Contacto</h3>
-            
-            <p>Si desea hacer una reserva o tiene alguna pregunta, no dude en ponerse en contacto con nosotros.</p>
-            
-            <ul>
-                <li>Teléfono: 1111-1234</li>
-                <li>Correo electrónico: info@hoteldivine.com</li>
-                <li>Dirección: 123 Main Street, Ciudad, Estado ZIP</li>
-            </ul>
-            
-        </main> -->
-
+    <!-- Scripts de Bootstrap -->
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="funcionalidades/habitaciones.js"></script>
+    <!-- Importacion de JQuery -->
+    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+    <!-- Javascript propio -->
+    <script src="js/datos-modal.js"></script>
+    <script src="js/habitaciones.js"></script>
 </body>
-
 </html>
