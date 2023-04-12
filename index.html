@@ -32,17 +32,80 @@
         <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <!-- Importando Fuentes -->
-        <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <link
+            href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
 
         <!-- Importando Jquery -->
         <script src="lib/jquery/jquery-3.4.1.min.js"></script>
-        
+
         <!-- Main CSS -->
         <link rel="stylesheet" href="estilo.css" />
     </head>
     <body>
-        
+        <header>
+            <nav
+                class="navbar navbar-expand-lg navbar-dark bg-dark"
+                data-bs-theme="dark"
+            >
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"
+                        ><svg
+                            width="29"
+                            height="30"
+                            viewBox="0 0 29 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M8.26845 29.9931V26.2339H13.2526C15.3286 26.3151 17.394 25.9016 19.2738 25.0282C20.806 24.2197 22.0222 22.9313 22.731 21.3657C23.5867 19.3596 23.9917 17.1942 23.918 15.0188C24.004 12.8384 23.6108 10.6654 22.7656 8.64917C22.0518 7.09114 20.8364 5.80955 19.3084 5.00369C17.4211 4.1132 15.3431 3.68777 13.2526 3.76389H4.1083V12.9885H12.4689V6.73259H16.5369V23.2595H12.4689V17.0036H4.1083V26.4045C4.10677 27.3558 3.72322 28.2677 3.04171 28.9404C2.36019 29.613 1.43629 29.9916 0.472483 29.9931H0V0.00466906H13.2526C16.0018 -0.0612259 18.722 0.571323 21.1522 1.84162C23.3544 3.04975 25.1554 4.86095 26.338 7.05676C27.6154 9.5174 28.2473 12.2549 28.1761 15.0188C28.2493 17.7829 27.6173 20.5209 26.338 22.9808C25.1571 25.1793 23.3558 26.9928 21.1522 28.2017C18.7177 29.4562 15.9977 30.073 13.2526 29.9931H8.26845Z"
+                                fill="#F2EDE3"
+                            />
+                        </svg>
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    href="#"
+                                    >Inicio</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Reservas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
         <script src="funcionalidades/habitaciones.js"></script>
     </body>
 </html>
