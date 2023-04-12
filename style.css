@@ -1,26 +1,15 @@
-/* FUENTE PARA TITULOS:
-    font-family: 'Clash Display', sans-serif;
-*/
-
-#main-colores {
-    color: #171A1B;
-    color: #1E2324;
-    color: #F2EDE3;
-    color: #A47E1B;
-    color: #AD78F0;
-}
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 html {
     font-size: 16px;
 }
 * {
-    box-sizing: border-box;
-    font-size: 1rem;
     margin: 0;
     padding: 0;
-}
-body {
+    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
     background-color: #171A1B;
-    color: #F2EDE3;
 }
+
