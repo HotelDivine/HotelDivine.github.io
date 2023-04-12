@@ -37,7 +37,7 @@
             rel="stylesheet"
         />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
             rel="stylesheet"
         />
 
@@ -49,15 +49,24 @@
     </head>
     <body>
         <main>
-            <section id="hero">
-                <h1>Divine</h1>
-                <h3>Hotel & Resort</h3>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Accusantium ex natus totam amet iusto.
-                </p>
-                <button type="button" class="btn btn-warning">Ver servicios</button
-                ><button type="button" class="btn btn-outline-light">Sobre nosotros </button>
+            <section id="hero" class="d-flex align-items-center">
+                <div class="container d-flex flex-column align-items-center align-items-md-start">
+                    
+                        <h1>Divine</h1>
+                        <h3>Hotel & Resort</h3>
+                        <p class="text-center text-md-start">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Accusantium ex natus totam amet iusto.
+                        </p>
+                        <div class="botones">
+                            <button type="button" class="btn btn-warning me-3 px-4 text-light">
+                                Ver servicios</button
+                            ><button type="button" class="btn btn-outline-light px-4">
+                                Sobre nosotros
+                            </button>
+                        </div>
+                    
+                </div>
             </section>
         </main>
         <script src="funcionalidades/habitaciones.js"></script>
