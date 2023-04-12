@@ -1,1 +1,13 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
 
+#hero {
+    background: rgba(0, 0, 0, 0.3)
+        url(images/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg) center center
+        no-repeat;
+    background-size: cover;
+    color: #f2ede3;
+    background-blend-mode: darken;
+}
