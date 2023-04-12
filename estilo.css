@@ -31,10 +31,10 @@
     font-weight: 400;
 }
 
-#hero .btn-gold{
-    background: #A47E1B;
+#hero .btn-gold {
+    background: #a47e1b;
 }
 
-#hero .btn-gold:hover{
+#hero .btn-gold:hover {
     background: #ca9b23;
 }
