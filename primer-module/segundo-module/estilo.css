@@ -1,0 +1,26 @@
+/* FUENTE PARA TITULOS:
+    font-family: 'Clash Display', sans-serif;
+*/
+
+#main-colores {
+    color: #171A1B;
+    color: #1E2324;
+    color: #F2EDE3;
+    color: #A47E1B;
+    color: #AD78F0;
+}
+
+html {
+    font-size: 16px;
+}
+* {
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #171A1B;
+    color: #F2EDE3;
+}
