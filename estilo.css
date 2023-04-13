@@ -1,3 +1,8 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+}
 
 #main-colores {
     color: #171A1B;
@@ -25,4 +30,38 @@ body {
 /* NAVBAR */
 nav .container-fluid{
     max-width: 1040px;
+}
+#hero {
+    background: rgba(0, 0, 0, 0.35)
+        url(HotelDivine.github.io/images/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg) center center
+        no-repeat;
+    background-size: cover;
+    color: #f2ede3;
+    background-blend-mode: darken;
+    height: 90vh;
+}
+
+#hero h1 {
+    font-family: "Clash Display", sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    margin: 0px;
+}
+
+#hero h3 {
+    font-weight: 300;
+}
+
+#hero p {
+    max-width: 497px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#hero .btn-gold {
+    background: #a47e1b;
+}
+
+#hero .btn-gold:hover {
+    background: #ca9b23;
 }
