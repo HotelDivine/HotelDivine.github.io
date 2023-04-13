@@ -1,0 +1,316 @@
+
+/* EDITANDO HTML */
+html {
+    font-size: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #171A1B;
+    color: #F2EDE3;
+}
+.room-section__info--valor p small {
+    font-weight: 400;
+    font-size: .875rem;
+}
+
+/* Botón dorado */
+.btn-gold {
+    background-color: #A47E1B;
+    color: #F2EDE3;
+    transition: 0.2s;
+}
+.modal-btn-gold {
+    background-color: #A47E1B;
+    color: #F2EDE3;
+    transition: 0.2s;
+}
+.modal-btn-gold:hover {
+    background-color: transparent;
+    background-color: #8f6d17;
+}
+.btn-gold:hover {
+    background-color: transparent;
+    outline: .0625rem solid #A47E1B;
+    color: #F2EDE3;
+}
+
+/* NAVBAR */
+nav .container-fluid{
+    max-width: 1040px;
+}
+
+.bg-darkblue {
+    background-color: #171A1B;
+}
+
+#hero {
+    background: rgba(0, 0, 0, 0.35)
+        url(../images/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg) center center
+        no-repeat;
+    background-size: cover;
+    color: #f2ede3;
+    background-blend-mode: darken;
+    height: 90vh;
+}
+
+#hero h1 {
+    font-family: "Clash Display", sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    margin: 0px;
+}
+
+#hero h3 {
+    font-weight: 300;
+}
+
+#hero p {
+    max-width: 497px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#hero .btn-gold {
+    background: #a47e1b;
+}
+
+#hero .btn-gold:hover {
+    background: #ca9b23;
+}
+/* INTRO */
+
+#intro {
+    min-height: 75vh;
+}
+
+#intro .info {
+    height: 60vh;
+    max-width: 600px;
+}
+
+#intro p {
+    margin: 0px;
+}
+
+@media (max-width: 576px) {
+    #intro .txt-icon {
+        text-align: center;
+    }
+}
+
+#intro h1 {
+    margin: 0px;
+    max-width: 400px;
+}
+
+#intro .img-intro {
+    height: clamp(221px, 35vw, 389px);
+    aspect-ratio: 3/4;
+    background: url(../images/francesca-tosolini-9dyitA0YIHE-unsplash.jpg) center
+        center no-repeat;
+    background-size: cover;
+}
+
+/* SECCION HABITACIONES */
+.room-description {
+    width: 95vw;
+    margin: auto;
+}
+
+#title-rooms {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.room-container {
+    width: 100%;
+    margin: 1.3rem 0;
+}
+
+.room-bg:nth-child(even) {
+	background-color: #1E2324;
+}
+
+.room-section {
+    width: 90%;
+    height: auto;
+    padding: 30px;
+}
+
+.room-section__media {
+    width: 40%;
+    position: relative;
+    height: 18.75rem;
+}
+
+.room-section__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.room-section__media--calificacion {
+    padding: .4rem 1rem;
+    background-color: #A47E1B;
+    position: absolute;
+    z-index: 100;
+    top: 1.4rem;
+    border-radius: 0 .4rem .4rem 0;
+}
+
+.room-section__media--calificacion p span {
+    font-weight: 500;
+}
+
+.room-section__info {
+    width: 54%;
+}
+
+.room-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.room-section__info--valor i {
+    color: #AD78F0;
+}
+
+.room-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* MODAL BODY */
+.modal-body-content {
+    margin: 1rem;
+}
+
+.modal-title {
+    color: #171A1B;
+}
+
+.modal-body-title {
+    display: inline;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #171A1B;
+}
+.modal-body-total {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: end;
+    color: #171A1B;
+}
+
+.btn-rooms {
+    border: 1px solid #dee2e6;
+}
+.btn-rooms:hover {
+    border: 1px solid #dee2e6;
+}
+
+.modal-body-content {
+    margin: 2.9375rem 0;
+    row-gap: 2.5rem;
+}
+
+/* MODAL Cotizacion */
+
+.modal-body {
+    color: #171A1B;
+}
+
+.modal-body-total {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: end;
+}
+
+.label-cotizacion {
+    font-weight: 500;
+    color: #171A1B;
+}
+
+/* 'Extras a añadir' */
+
+.form-check {
+    border: 1px solid #dee2e6;
+    padding: .375rem .75rem;
+    border-radius: .375rem;
+    margin: 0;
+    display: inline;
+    color: #171A1B;
+}
+
+/* 'Personas y Habitaciones' */
+
+.accordion-button {
+    padding: .5625rem .75rem;
+}
+
+.label-pple-room {
+    font-weight: 500;
+}
+
+.room-width-input {
+    width: 7.5rem;
+}
+
+/* MODAL Datos personales */
+.icon-datos-pers {
+    font-size: 1rem;
+    color: #1e2324d2;
+}
+
+/* MODAL Resumen */
+
+.total-class-resume {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.vr-style {
+    height: 100%;
+    color: #171A1B;
+}
+
+.fs-18 {
+    font-size: 1.125rem;
+}
+
+.class-day-resume {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 767px) {
+    .room-section__media img {
+        width: 100%;
+        height: 14.375rem;
+    }
+
+    .room-section__media--calificacion {
+        top: -5rem;
+    }
+
+    .room-title {
+        margin: 1.3rem 0 1rem 0;
+    }
+}
+
+@media screen and (max-width: 911px){
+    #intro .img-intro {
+        height: 447px;
+        aspect-ratio: 3/4;
+    }
+}
