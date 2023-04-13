@@ -38,7 +38,7 @@ nav .container-fluid{
 }
 #hero {
     background: rgba(0, 0, 0, 0.35)
-        url(primer-module/images/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg) center center
+        url(HotelDivine.github.io/images/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg) center center
         no-repeat;
     background-size: cover;
     color: #f2ede3;
@@ -99,7 +99,7 @@ nav .container-fluid{
 #intro .img-intro {
     height: clamp(221px, 35vw, 389px);
     aspect-ratio: 3/4;
-    background: url(primer-module/images/francesca-tosolini-9dyitA0YIHE-unsplash.jpg) center
+    background: url(HotelDivine.github.io/images/francesca-tosolini-9dyitA0YIHE-unsplash.jpg) center
         center no-repeat;
     background-size: cover;
 }
