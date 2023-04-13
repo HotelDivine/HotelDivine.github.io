@@ -5,11 +5,16 @@
 }
 
 #main-colores {
-    color: #171A1B;
-    color: #1E2324;
-    color: #F2EDE3;
-    color: #A47E1B;
-    color: #AD78F0;
+    color: #171a1b;
+    color: #1e2324;
+    color: #f2ede3;
+    color: #a47e1b;
+    color: #ad78f0;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
 html {
@@ -64,4 +69,43 @@ nav .container-fluid{
 
 #hero .btn-gold:hover {
     background: #ca9b23;
+}
+/* INTRO */
+
+#intro {
+    min-height: 75vh;
+}
+
+#intro .info {
+    height: 60vh;
+    max-width: 600px;
+}
+
+#intro p {
+    margin: 0px;
+}
+
+@media (max-width: 576px) {
+    #intro .txt-icon {
+        text-align: center;
+    }
+}
+
+#intro h1 {
+    margin: 0px;
+    max-width: 400px;
+}
+
+#intro .img-intro {
+    height: clamp(221px, 35vw, 389px);
+    aspect-ratio: 3/4;
+    background: url(HotelDivine.github.io/images/francesca-tosolini-9dyitA0YIHE-unsplash.jpg) center
+        center no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 911px){
+    #intro .img-intro {
+        height: 447px;
+        aspect-ratio: 3/4;
+    }
 }
