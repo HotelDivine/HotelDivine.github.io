@@ -51,7 +51,7 @@ nav .container-fluid{
 
 #hero {
     background: rgba(0, 0, 0, 0.35)
-        url(../images/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg) center center
+        url(../images/fondo-intro.jpg) center center
         no-repeat;
     background-size: cover;
     color: #f2ede3;
@@ -112,7 +112,7 @@ nav .container-fluid{
 #intro .img-intro {
     height: clamp(221px, 35vw, 389px);
     aspect-ratio: 3/4;
-    background: url(../images/francesca-tosolini-9dyitA0YIHE-unsplash.jpg) center
+    background: url(../images/fondo-service.jpg) center
         center no-repeat;
     background-size: cover;
 }

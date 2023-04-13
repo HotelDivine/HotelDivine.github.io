@@ -10,6 +10,7 @@ $.ajax({
         for (var response in json) {
             let data = json[response];
             let title = data["titulo"];
+            let imagen = data["imagen"];
             let description = data["descripcion"];
             let price = data["precio"];
 
@@ -24,7 +25,7 @@ $.ajax({
             <div class="room-section d-md-flex gx-3 align-content-center justify-content-between">
     
                 <div class="room-section__media d-inline">
-                    <img src="images/febrian-zakaria-gwV9eklemSg-unsplash.jpg" alt="imagen multimedia" id="ROOM-IMAGE">
+                    <img src= ${imagen} alt="imagen multimedia" id="ROOM-IMAGE">
                     <div class="room-section__media--calificacion">
                         <p class="d-inline">
                             <span id="calification">${calificacion}</span>
@@ -42,7 +43,7 @@ $.ajax({
                             <span id="top">Top ${top}</span>
                         </p>
                         <p>
-                            <small>Desde*</small>
+                            <small>Desde</small>
                             <span class="room-price">
                                 $
                                 <span id="price">${price}</span>
