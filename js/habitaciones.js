@@ -48,21 +48,41 @@ $.ajax({
                                 $
                                 <span id="price">${price}</span>
                             </span>
-                        </p>
-                    </div>
-                    <button type="button" class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-                        Comenzar reserva
-                    </button>
-                </div>`;
-            
+                            </p>
+                            </div>
+                            <button type="button" class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                            Comenzar reserva
+                            </button>
+                            </div>`;
 
-            contenedor.appendChild(room);
-        }
 
-        let botones = document.querySelectorAll(".btn-reservation");
+                            
+                            contenedor.appendChild(room);
+                            
+                        }
+                        // let total = document.getElementById("precioso");
+                        // total.innerHTML = price;
 
-        botones.forEach(function (boton) {
-            boton.addEventListener("click", mostrarAlerta);
+        const habitacionesInput = document.getElementById("cantH");
+        const outputHabitaciones = document.getElementById("cantHm");
+        habitacionesInput.addEventListener("input", function () {
+            outputHabitaciones.textContent = habitacionesInput.value;
         });
+
+        const mayoresInput = document.getElementById("cantMay");
+        const outputMayores = document.getElementById("cantMaym");
+        mayoresInput.addEventListener("input", function () {
+            outputMayores.textContent = mayoresInput.value;
+        });
+
+        const menoresInput = document.getElementById("cantMen");
+        const outputMenores = document.getElementById("cantMenm");
+        menoresInput.addEventListener("input", function () {
+            outputMenores.textContent = menoresInput.value;
+        });
+
+        const diasInput = document.getElementById("cantD");
+        const outputDias = document.getElementById("cantDm");
+
     }
 })
