@@ -83,8 +83,7 @@
                     <h1>Divine</h1>
                     <h3 class="mb-4">Hotel & Resort</h3>
                     <p class="text-center text-md-start">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Accusantium ex natus totam amet iusto.
+                        ¡Hola! Bienvenido. Nos complace ofrecerle una experiencia única y memorable durante su estadía.
                     </p>
                     <div
                         class="botones d-flex flex-column flex-sm-row gap-4 flex-wrap w-100 justify-content-center justify-content-md-start"
@@ -117,12 +116,7 @@
                                 Disfrute de una experiencia de lujo
                             </h1>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Aliquam, officia! A, ullam
-                                enim autem atque natus veniam id quasi neque
-                                minima voluptates iure veritatis dicta cum
-                                magnam officia harum facilis corrupti, possimus
-                                unde adipisci minus sint nulla culpa inventore!
+                                Nuestro hotel cuenta con habitaciones cómodas y elegantes, un servicio excepcional y una ubicación privilegiada en el corazón de la ciudad. Ya sea que esté aquí por negocios o por placer, nuestro objetivo es hacer que su estadía sea lo más agradable posible. ¡Esperamos darle la bienvenida pronto!
                             </p>
                             <div
                                 class="comodidades d-flex justify-content-between"
@@ -206,7 +200,7 @@
                 <div class="room-description">
                     <h2 id="title-rooms">Seleccion de habitaciones</h2>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, officia! A, ullam enim autem atque natus veniam id quasi neque minima voluptates iure veritatis dicta cum magnam officia harum facilis.
+                        Nuestro hotel cuenta con diversas habitaciones, que van desde habitaciones estándar hasta suites de lujo. Todas nuestras habitaciones están diseñadas para brindarle la máxima comodidad y elegancia durante su estadía. Cada habitación cuenta con comodidades modernas como televisores de pantalla plana, acceso a Internet de alta velocidad y ropa de cama de alta calidad para garantizar una noche de sueño reparador.
                     </p>
                 </div>
                 <div id="all-rooms" class="room-container d-flex flex-column justify-content-center"></div>
@@ -228,10 +222,7 @@
                 <div class="modal-body">
                     <div class="d-flex justify-content-between align-items-center mx-3">
                         <h2 class="modal-body-title m-0">Escoger estancia</h2>
-                        <p class="modal-body-total m-0">
-                            Total $
-                            <span id="PRECIO-TOTAL">0,00</span>
-                        </p>
+                        <p class="modal-body-total m-0"></p>
                     </div>
                     <hr>
                     <div class="modal-body-content d-flex flex-column mx-3">
@@ -258,7 +249,7 @@
                                                         Máx. 4 habitaciones
                                                     </span>
                                                 </div>
-                                                <input type="number" id="inputNumber1"
+                                                <input type="number" id="cantH"
                                                     class="form-control room-width-input" max="4" min="0">
                                             </div>
                                             <hr>
@@ -267,10 +258,10 @@
                                                     <label for="inputNumber1" class="d-block p-0 label-pple-room"
                                                         aria-describedby="passwordHelpInline">Mayores</label>
                                                     <span id="passwordHelpInline" class="form-text">
-                                                        Máx. 8 personas en total
+                                                        Máx. 8 personas
                                                     </span>
                                                 </div>
-                                                <input type="number" id="inputNumber1"
+                                                <input type="number" id="cantMay"
                                                     class="form-control room-width-input" max="8" min="0">
                                             </div>
                                             <hr>
@@ -279,10 +270,10 @@
                                                     <label for="inputNumber1" class="d-block p-0 label-pple-room"
                                                         aria-describedby="passwordHelpInline">Menores</label>
                                                     <span id="passwordHelpInline" class="form-text">
-                                                        Máx. 8 personas en total
+                                                        Máx. 8 personas
                                                     </span>
                                                 </div>
-                                                <input type="number" id="inputNumber1"
+                                                <input type="number" id="cantMen"
                                                     class="form-control room-width-input" max="8" min="0">
                                             </div>
                                         </div>
@@ -296,10 +287,10 @@
                             <div class="col-lg-7 mt-2">
                                 <div class="row g-3">
                                     <div class="col">
-                                        <input type="date" id="inputDate" class="form-control">
+                                        <input type="date" id="cantDini" class="form-control">
                                     </div>
                                     <div class="col">
-                                        <input type="date" id="inputDate" class="form-control">
+                                        <input type="date" id="cantDfin" class="form-control" disabled="off">
                                     </div>
                                 </div>
                             </div>
@@ -648,7 +639,7 @@
                     <div class="modal-footer">
                         <button class="btn btn-dark" data-bs-target="#exampleModalToggle"
                             data-bs-toggle="modal">Volver</button>
-                        <button class="btn modal-btn-gold" data-bs-target="#exampleModalToggle3"
+                        <button id="fin" class="btn modal-btn-gold" data-bs-target="#exampleModalToggle3"
                             data-bs-toggle="modal">Siguiente</button>
                     </div>
                 </div>
@@ -690,17 +681,17 @@
                                             <p class="class-day-resume">Dom, 23 abr 2023</p>
                                             <!-- Texto de ejemplo, este div deberia estar vacio -->
                                         </div>
-                                        <p class="opacity-75"><small>A 12:00</small></p>
+                                        <p class="opacity-75"><small>12:00</small></p>
                                     </div>
                                 </div>
                                 <hr class="my-3">
                                 <div class="col-12">
                                     <div id="ID-PARA_JS">
-                                        <p class="fs-18">1 x Habitacion compartida, 2 adultos, 0 menores</p>
+                                        <p>habitaciones: <span id="cantHm"></span>, mayores: <span id="cantMaym"></span>, menores: <span id="cantMenm"></span>.</p>
                                         <!-- Texto de ejemplo, este div deberia estar vacio -->
                                     </div>
                                     <div class="d-flex justify-content-end">
-                                        <p class="m-0 d-inline total-class-resume">Total $ <span  id="ID-PARA_JS">0,00</span></p>
+                                        <p class="m-0 d-inline total-class-resume">Total $ <span id="precio"></span></p>
                                     </div>
                                 </div>
                             </div>
