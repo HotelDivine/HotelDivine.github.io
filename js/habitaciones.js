@@ -50,7 +50,7 @@ $.ajax({
                             </span>
                             </p>
                             </div>
-                            <button type="button" class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                            <button type="button" class="btn btn-gold btn-reservation" id="btn-reservation" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                             Comenzar reserva
                             </button>
                             </div>`;

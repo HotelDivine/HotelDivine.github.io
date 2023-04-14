@@ -1,6 +1,6 @@
 [
     {
-        "id":1,
+        "id":0,
         "imagen": "images/individual.jpg",
         "titulo": "Individual",
         "descripcion":"Habitación individual con cama king size y baño privado. Esta habitación es ideal para viajeros solitarios que buscan comodidad y privacidad. Descansa en la cama king size después de un largo día de turismo y relájate en tu baño privado.",
@@ -11,7 +11,7 @@
         "calificacion": 4.4
     },
     {
-        "id":2,
+        "id":1,
         "imagen": "images/estandar.jpg",
         "titulo": "Estándar",
         "descripcion":"Habitación estándar con dos camas individuales y vistas al jardín. Esta habitación es ideal para aquellos que buscan una estancia cómoda y sencilla. Disfruta de las vistas al jardín mientras descansas en las cómodas camas individuales.",
@@ -22,7 +22,7 @@
         "calificacion": 4.3
     },
     {
-        "id":3,
+        "id":2,
         "imagen": "images/familiar.jpg",
         "titulo": "Familiar",
         "descripcion":"Habitación familiar con dos camas dobles y cocina americana. Esta habitación es ideal para familias que buscan comodidad y espacio. Prepara tus propias comidas en la cocina americana y descansa en las cómodas camas dobles después de un día lleno de diversión.",
@@ -33,7 +33,7 @@
         "calificacion": 4.7
     },
     {
-        "id":4,
+        "id":3,
         "imagen": "images/ejecutiva.jpg",
         "titulo": "Ejecutiva",
         "descripcion":"Habitación ejecutiva con escritorio y vistas a la montaña. Esta habitación es perfecta para viajeros de negocios que necesitan trabajar durante su estancia. Disfruta de las impresionantes vistas a la montaña mientras trabajas en tu escritorio.",
@@ -44,7 +44,7 @@
         "calificacion": 4.6
     },
     {
-        "id":5,
+        "id":4,
         "imagen": "images/suite.jpg",
         "titulo": "Suite",
         "descripcion":"Suite junior con sala de estar y vistas panorámicas a la ciudad. Esta suite es perfecta para aquellos que buscan un poco más de espacio y comodidad. Disfruta de las vistas panorámicas a la ciudad desde tu sala de estar mientras te relajas en el sofá.",
@@ -55,7 +55,7 @@
         "calificacion": 4.7
     },
     {
-        "id":6,
+        "id":5,
         "imagen": "images/lujosa.jpg",
         "titulo": "Lujosa",
         "descripcion":"Habitación superior con cama queen size y bañera de hidromasaje. Esta habitación es perfecta para aquellos que buscan un poco más de lujo durante su estancia. Relájate en la bañera de hidromasaje después de un largo día y descansa en la cómoda cama queen size.",
@@ -66,7 +66,7 @@
         "calificacion": 4.5
     },
     {
-        "id":7,
+        "id":6,
         "imagen": "images/suite-presidencial.jpg",
         "titulo": "Suite Presidencial",
         "descripcion":"Suite presidencial con sala de estar, comedor y terraza privada. Esta suite es perfecta para aquellos que buscan lo mejor durante su estancia. Disfruta de la amplia sala de estar, el comedor y la terraza privada mientras te relajas en el lujo.",
