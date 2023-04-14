@@ -13,7 +13,7 @@ $.ajax({
             let imagen = data["imagen"];
             let description = data["descripcion"];
             let price = data["precio"];
-
+            let id = data["id"];
             let calificacion = data["calificacion"];
             let top = data["top"];
 
@@ -50,7 +50,7 @@ $.ajax({
                             </span>
                             </p>
                             </div>
-                            <button type="button" class="btn btn-gold btn-reservation" id="btn-reservation" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                            <button type="button" value="${id}" class="btn btn-gold btn-reservation" id="btn-reservation"" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                             Comenzar reserva
                             </button>
                             </div>`;
@@ -85,4 +85,5 @@ $.ajax({
         const outputDias = document.getElementById("cantDm");
 
     }
-})
+
+});
