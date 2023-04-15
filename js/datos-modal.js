@@ -1,5 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+      let buttons = document.getElementsByClassName('btn-reservation');
+      for (let i = 0; i < buttons.length; i++) {
+          console.log("i");
+        buttons[i].addEventListener('click', function() {
+          // let btnId = buttons[i];
+
+          // fetch('json/habitaciones.json')
+          //   .then((response) => response.json())
+          //   .then((json) => {
+                
+          //       let precio = json[btnId]["precio"];
+          //       let total = document.getElementById("precio");
+          //       total.innerHTML = precio;
+
+
+          //   })
+            
+        });
+      }
     let fecha1input = document.getElementById('cantDini');
     let fecha2input = document.getElementById('cantDfin');
 
@@ -28,27 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  let buttons = document.getElementsByClassName('btn-reservation');
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function() {
-      console.log(buttons[i].value);
-
-      let btnId = buttons[i].value;
-      fetch('json/habitaciones.json')
-        .then((response) => response.json())
-        .then((json) => {
-            
-            let precio = json[btnId]["precio"];
-            // let cot = document.getElementById('cot');
-            let total = document.getElementById("precio");
-            total.innerHTML = precio;
-            // cot.innerHTML = diasEntreFechas * json[btnId]["precio"];
-
-
-        })
-        
-    });
-  }
 });
 
 
