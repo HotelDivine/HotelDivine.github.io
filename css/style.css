@@ -481,3 +481,44 @@ nav .container-fluid{
         aspect-ratio: 3/4;
     }
 }
+
+/* COMENTARIOS */
+#comments{
+    color: #F2EDE3;
+}
+
+#comments .circle{
+    margin: 0px;
+    background: #F2EDE3;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+#comments h2{
+    font-family: 'Clash Display', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    width: 336px;
+}
+
+#comments h3{
+    padding-top: 1px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+#comments .info-comment .comment-stars, .info-comment p{
+    display: inline-block;
+}
+
+.info-comment p{
+    font-size: 12px;
+    color: #c0c0c0 ;
+}
+
+#comments .usr-comment>p{
+    max-width: 500px;
+    font-size: 14px;
+}
