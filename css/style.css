@@ -522,3 +522,87 @@ nav .container-fluid{
     max-width: 500px;
     font-size: 14px;
 }
+
+/* CONTACTO */
+#contacto {
+    width: 95vw;
+    margin: auto;
+}
+
+#container-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #1E2324;
+    padding: 3.75rem 4.5rem;
+}
+
+#container-contact form {
+    min-width: 30rem;
+}
+
+#title-contact {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+}
+
+.contact-titles {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* CARDS 'Quiénes Somos' */
+.about-contact__card {
+    display: flex;
+    height: 4.75rem;
+}
+
+.contact-card__img {
+    width: 4.5rem;
+    height: 4.5rem;
+    background: #fff;
+    border-radius: 3rem;
+}
+
+.contact-card__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1rem;
+}
+
+.contact-card__text p {
+    margin: 0;
+}
+
+.contact-card__text p:first-child {
+    font-weight: 600;
+}
+
+.line-hr {
+    display: block;
+    background-color: #171A1B;
+    height: .0625rem;
+    margin: 1rem 0;
+}
+
+.card-text__smalltext {
+    font-size: .875rem;
+    color: #f2ede3c5;
+}
+
+/* MEDIA QUERIES - CONTACTO */
+
+@media only screen and (max-width: 670px) {
+    /* Reduzco el padding del contenedor de contacto para que se visualice mejor */
+    #container-contact {
+        padding: 3rem;
+    }
+
+    /* Convierto el ancho minimo del formulario del contacto a un tamaño automatico para que no se salga de la pantalla */
+    #container-contact form {
+        min-width: auto;
+    }
+}
+/* FIN CONTACTO */
