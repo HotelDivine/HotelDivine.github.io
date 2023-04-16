@@ -514,8 +514,13 @@ nav .container-fluid {
 }
 
 #comments .usr-comment > p {
-    max-width: 60%;
-    font-size: 16px;
+    max-width: 80%;
+    font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+    #comments .usr-comment > p {
+        max-width: 100%;
+    }
 }
 
 /* CONTACTO */
