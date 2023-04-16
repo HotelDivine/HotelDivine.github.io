@@ -520,6 +520,7 @@
                                         <option value="Zambia">Zambia</option>
                                         <option value="Zimbabwe">Zimbabwe</option>
                                     </select>
+                                    <span id="errorState"></span>
                                 </div>
                             </div>
                         </div>
@@ -545,19 +546,20 @@
             const inputApellido = document.getElementById('apellido');
             const inputEmail = document.getElementById('inputEmail3');
             const inputPais = document.getElementById('inputState');
+            const error = document.getElementById('errorState');
             const nombre = inputNombre.value.trim();
             const apellido = inputApellido.value.trim();
             const pais = inputPais.value.trim();
             const email = inputEmail.value.trim();
 
             if (nombre == "" || apellido == "" || pais == "Seleccionar..." || email == "") {
-                alert('Por favor, complete todos los campos.');
+                error.innerHTML = ('Por favor, complete el campo.');
                 return;
             }
             // agregar código para enviar el formulario si todos los campos son válidos
         });
     </script>
-    <!-- ======= Form Resumen ======= -->
+    <!-- ======= Form Resumen =======
     <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -565,17 +567,17 @@
                     <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">Resumen</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <!-- Body / form -->
+                 Body / form 
                 <div class="modal-body">
                     CONTENIDO
                 </div>
-                <!-- Footer / botones -->
+                 Footer / botones 
                 <div class="modal-footer">
                     <button class="btn btn-dark" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Volver</button>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- <main class="container-xl">
         <div class="row rooms">
