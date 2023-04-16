@@ -610,13 +610,13 @@ nav .container-fluid {
 /*:::FOOTER:::*/
 
 .pie-pagina {
-    width: 100%;
+    margin-top: 20vh;
     background-color: #1e2324;
 }
 
 .pie-pagina .grupo-1 {
     width: 100%;
-    max-width: 75rem;
+    /* max-width: 75rem; */
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -678,9 +678,6 @@ nav .container-fluid {
 .pie-pagina .grupo-2 {
     background-color: #171a1b;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
     padding: 0.4688rem 0.625rem;
     text-align: center;
     color: #f2ede3;
@@ -688,8 +685,6 @@ nav .container-fluid {
 
 .pie-pagina .grupo-2 small {
     font-size: 0.75rem;
-    text-align: center;
-    margin: auto;
 }
 
 .pie-pagina hr {
@@ -712,13 +707,6 @@ nav .container-fluid {
     .box-aclaracion {
         margin: auto auto;
         text-align: center;
-    }
-
-    .pie-pagina .grupo-2 {
-        width: 100%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 1.5rem;
-        padding: 1.8em 0;
     }
 }
 
