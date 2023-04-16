@@ -14,7 +14,7 @@ function generatePdf() {
   let rucH = 'RUC : 0000000000';
   let addressH = 'Direccion : Buenos Aires, Argentina';
   let phoneH = 'Telefono : +54 9 3522 65-0395';
-  let emailH = 'Email : nicnando123@gmail';
+  let emailH = 'Email : hoteldivine@gmail';
   let today = new Date;
   let dateA = `${today.toLocaleString()} - ${today.toLocaleTimeString()}`;
   let rooms = `Habitaciones : ${d.getElementById('cantH').value}`;
