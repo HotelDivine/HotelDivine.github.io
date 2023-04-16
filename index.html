@@ -27,7 +27,7 @@
         <!-- SECTION NAVBAR -->
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-darkblue fixed-top">
-                <div class="container-fluid">
+                <div class="container-md">
                     <a class="navbar-brand" href="#"><img src="images/isotipo.svg" alt="#" />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -75,9 +75,9 @@
             </section>
 
             <!-- SECTION INTRO -->
-            <div id="intro" class="container-xl">
+            <div id="intro" class="container-md">
                 <div class="">
-                    <div class="my-5 m-auto d-flex justify-content-between flex-wrap gap-3 px-3">
+                    <div class="my-5 m-auto d-flex justify-content-between flex-wrap gap-3">
                         <div class="info m-auto d-flex flex-column justify-content-around mb-3">
                             <h1 class="text-start">
                                 Disfrute de una experiencia de lujo
@@ -141,7 +141,7 @@
 
             <!-- SECTION SERVICES -->
             <section id="servicios">
-                <div class="services">
+                <div class="services container-md">
                     <div class="grupo-1">
                         <h2 id="title-services">Servicios de calidad</h2>
                         <p>
@@ -226,7 +226,7 @@
             </section>
 
             <!-- SECTION HABITACIONES -->
-            <section id="reservas">
+            <section class="container-md">
                 <div class="room-description">
                     <h2 id="title-rooms">Seleccion de habitaciones</h2>
                     <p>
@@ -244,8 +244,8 @@
             </section>
 
             <!-- SECTION COMENTARIOS -->
-            <section id="comments">
-                <div class="container">
+            <section id="comments" class="my-5">
+                <div class="container-md">
                     <h2>Opiniones de nuestros clientes</h2>
                     <p>
                         ¡Echa un vistazo a nuestras calificaciones y opiniones para por qué nuestros clientes nos consideran una opción de alojamiento de 5 estrellas!"
@@ -287,9 +287,9 @@
                             </div>
                             <p class="my-0 pt-1">28 reseñas</p>
                         </div>
-                        <hr />
+                        <hr class="mb-4"/>
                         <div class="usr-comment">
-                            <div class="usr-info d-flex gap-3">
+                            <div class="usr-info d-flex gap-3 mb-3">
                                 <div class="circle"></div>
                                 <div class="info-comment">
                                     <h6>Jose Luis Alberto</h6>
@@ -333,9 +333,9 @@
                                 "¡Una experiencia de hotel de primer nivel! Desde el momento en que llegué, quedé impresionado con la atención al detalle y el servicio impecable. Las instalaciones son de primer nivel, con habitaciones elegantes y cómodas
                             </p>
                         </div>
-                        <hr style="color: #505c5f" />
+                        <hr class="my-4" style="color: #505c5f" />
                         <div class="usr-comment">
-                            <div class="usr-info d-flex gap-3">
+                            <div class="usr-info d-flex gap-3 mb-3">
                                 <div class="circle"></div>
                                 <div class="info-comment">
                                     <h6>Emilia Fernandez</h6>
@@ -379,13 +379,13 @@
                                 comida y una ubicación perfecta. ¡Recomiendo encarecidamente este lugar!"
                             </p>
                         </div>
-                        <hr />
+                        <hr class="mt-4"/>
                     </div>
                 </div>
             </section>
 
             <!-- SECCION CONTACTO -->
-            <section id="contacto">
+            <section id="contacto" class="container-md">
                 <h2 id="title-contact">
                     ¿Tiene alguna <br />
                     pregunta que hacernos?
@@ -463,33 +463,40 @@
 
             <!-- SECTION FOOTER -->
             <footer class="pie-pagina">
-                <div class="grupo-1">
-                    <div class="box">
-                        <figure class="figure-logo">
-                            <a href="#">
-                                <img class="figure-logo-img" src="images/imagotipo.svg" alt="imagotipo
-                            </a>
-                        </figure>
+            <div class="container-md">
+                    <div class="grupo-1">
+                        <div class="box">
+                            <figure class="figure-logo">
+                                <a href="#">
+                                    <img class="figure-logo-img" src="images/imagotipo.svg" alt="imagotipo">
+                                </a>
+                            </figure>
+                        </div>
+                        <hr />
+                        <div class="box box-aclaracion">
+                            <h3>Aclaración</h3>
+                            <p>
+                                Esta es una página para una empresa ficticia,
+                                realizada para un proyecto integrador de “Argentina
+                                programa 4.0”.
+                            </p>
+                        </div>
                     </div>
-                    <hr />
-                    <div class="box box-aclaracion">
-                        <h3>Aclaración</h3>
-                        <p>
-                            Esta es una página para una empresa ficticia,
-                            realizada para un proyecto integrador de “Argentina
-                            programa 4.0”.
-                        </p>
-                    </div>
+                
+            </div>
+            
+                    <div class="grupo-2">
+                    <div class="container-md d-flex justify-content-between flex-column flex-sm-row">
+                            <small>&copy; 2023 DivineHotel - Todos los Derechos
+                                Reservados.</small>
+                            <div class="box mt-3 mt-sm-0">
+                                <a href="#" class="icon-rd"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="icon-rd"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="icon-rd"><i class="bi bi-twitter"></i></a>
+                            </div>
+                        </div>
                 </div>
-                <div class="grupo-2">
-                    <small>&copy; 2023 DivineHotel - Todos los Derechos
-                        Reservados.</small>
-                    <div class="box">
-                        <a href="#" class="icon-rd"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="icon-rd"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="icon-rd"><i class="bi bi-twitter"></i></a>
-                    </div>
-                </div>
+            
             </footer>
         </main>
 
