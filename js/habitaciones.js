@@ -62,57 +62,155 @@ document.addEventListener('DOMContentLoaded', () => {
 
             }
 
+            let nombre = document.getElementById("nombre");
+            let apellido = document.getElementById("apellido");
+            let inputEmail3 = document.getElementById("inputEmail3");
+            
+
             let fecha1input = document.getElementById('cantDini');
             let fecha2input = document.getElementById('cantDfin');
 
+            var boton1 = document.getElementById("boton1");
+            var boton2 = document.getElementById("boton2");
+
+            // Ajustar las fechas
+            // obtengo la fecha actual
             let fechaActual = new Date();
+            
+            // corto la fecha en dias, mes, y anio
             let dia = fechaActual.getDate().toString().padStart(2, '0');
             let mes = (fechaActual.getMonth() + 1).toString().padStart(2, '0');
             let anio = fechaActual.getFullYear().toString();
 
+            // le doy valor 0 para que no me salte un error y me cancele la ejecucion del codigo
+            let diasEntreFechas = 0;
+            // obtengo lafecha en un formato valido
             let fechaFinal1 = `${anio}-${mes}-${dia}`;
+            // al input date solo podras poner una fecha del presente o del futuro
             fecha1input.setAttribute('min', fechaFinal1);
+            // cuando la fecha de ingreso se cambie...
             fecha1input.addEventListener("change", () => {
-                fecha2input.removeAttribute("disabled");
+                // activo el input de la fecha de regreso
+                fecha2input.disabled = false;
+                // a la fecha de regreso solo podras elegir un dia que no sea antes de la fecha de ingreso
                 fecha2input.setAttribute('min', fecha1input.value);
+                // cuando la fecha de regreso cambie
                 fecha2input.addEventListener("change", () => {
+                    // creo una variable de formato fecha con el valor de los input
                     let fecha1 = new Date(fecha1input.value);
                     let fecha2 = new Date(fecha2input.value);
+                    // con math.abs retorno el valor absoluto deun numero
+                    // con getTime() obtengo el valor en milisegundos de la fechaingresada
+                    // resto fecha2 - fecha1
                     let diferenciaEnMilisegundos = Math.abs(fecha2.getTime() - fecha1.getTime());
-                    let diasEntreFechas = Math.ceil(diferenciaEnMilisegundos / (1000 * 60 * 60 * 24));
-
-                    console.log(diasEntreFechas);
-
-
+                    // math.ceil te devuelvue un entero
+                    // si a los milisegundo lo dividis por 1000 obtenes segundos
+                    // si a los segundos los dividis por 60 obtenes minutus
+                    // si a los minutos lo dividis por 60 obtienes horas
+                    // si a las horas las dividis por 24 obtienes dias 
+                    diasEntreFechas = Math.ceil(diferenciaEnMilisegundos / (1000 * 60 * 60 * 24));
+                    // activo el boton siguiente del modal1
+                    boton1.disabled = false;
                 });
             });
 
 
 
-
+            // todos los botones con la clase btn-reservation
             let buttons = document.getElementsByClassName('btn-reservation');
+            // recorro los botones
             for (let i = 0; i < buttons.length; i++) {
+                // si uno de esos botones es tocado, identifica cual es el i en el que esta (por ejemplo 4)
                 buttons[i].addEventListener('click', function () {
-                    console.log(buttons[i].value);
-
+                    // en el index.html busca el value del boton tocado(te dara 4)
                     let btnId = buttons[i].value;
+                    // buscame en json/habitaciones.json
                     fetch('json/habitaciones.json')
                         .then((response) => response.json())
                         .then((json) => {
-
+                            // busca en el json, en la posicion 4, el valor del precio
                             let precio = json[btnId]["precio"];
+
                             let total = document.getElementById("precio");
-                            var boton = document.getElementById("fin");
                             var cantHa = document.getElementById("cantH");
+                            // les doy ese valor para que el precio total tenga algo de que sumar
+                            var habita = 0;
+                            var may = 0;
+                            var men = 0;
                             const mayores = document.getElementById("cantMay");
                             const menores = document.getElementById("cantMen");
-                            boton.addEventListener("click", function () {
+                            // cuando el boton siguiente del modal 1 sea clickeado
+                            boton1.addEventListener("click", function (e) {
+                                e.preventDefault();
+                                // tomo los valores de estos inputs
                                 var habita = cantHa.value;
                                 var may = mayores.value;
                                 var men = menores.value;
-                                let precioTotal = (precio * habita) + (may * 1000) + (men * 500);
-                                total.innerHTML = precioTotal;
+                                // calculo el precio total con esta formulota
+                                precioTotal = ((precio * habita) + (may * 1000) + (men * 500))*diasEntreFechas;
+
+                                let precio1 = document.getElementById("fechaEnt");
+                                let precio2 = document.getElementById("fechaSal");
+
+                                // modifico el valor de la fecha del ultimo modal 
+                                precio1.innerHTML = document.getElementById('cantDini').value;
+                                precio2.innerHTML = document.getElementById('cantDfin').value;
+
+                                // formateo el precio total para que me ponga puntos en el precio
+                                precioTotal = new Intl.NumberFormat('de-US', { style: 'currency', currency:'USD'}).format(precioTotal);
+                                total.innerHTML = `(${precioTotal}USD)`;
+                                
                             });
+                            let modal1 = document.getElementById("modal1"); 
+                            let cotizacion = document.getElementById("cot");
+                            // cuando el modal 1 sufra algun cambio
+                            modal1.onchange = function(){
+                                // tomo los valores de estos inputs
+                                habita = cantHa.value;
+                                may = mayores.value;
+                                men = menores.value;
+                                // calculo el precio total con esta formulota
+                                precioTotal = ((precio * habita)+(may*1000) + (men*500))*diasEntreFechas;
+                                // formateo el precio total para que me ponga puntos en el precio
+                                precioTotal = new Intl.NumberFormat('de-US', { style: 'currency', currency:'USD'}).format(precioTotal);
+                                cotizacion.innerHTML = `(${precioTotal}USD)`;
+                            }
+                            let modal2 = document.getElementById("modal2");
+                            // cuando el modal 2 sufra algun cambio
+                            modal2.onchange = function(){
+                                if (nombre !== "") {
+                                    // habilito el boton de siguiente
+                                    boton2.disabled = false;
+                                }
+                            }
+                            boton2.onclick = function(e){
+                                // no mando el formulario
+                                e.preventDefault();
+                            }
+                            let enviarForm = document.getElementById('submit');
+                            // cuando trate de mandar el formulario
+                            document.addEventListener("submit",(e)=>{
+                                // no me mandes el formulario
+                                e.preventDefault();
+                                let descargarTicket = document.getElementById('downloadTicket');
+                                alert("Se reservo con exito, por favor descarga el ticket en el boton que te acabamos de habilitar");
+                                // habilitame el boton para descargar el comprobante
+                                descargarTicket.disabled = false;
+                            })
+                            let botonClose1 = document.getElementById("close1");
+                            let botonClose2 = document.getElementById("close2");
+                            let botonClose3 = document.getElementById("close3");
+
+                            // evito que el boton de volver te recargue la pagina
+                            botonClose1.onclick = function(e){
+                                e.preventDefault();
+                            }
+                            botonClose2.onclick = function(e){
+                                e.preventDefault();
+                            }
+                            botonClose3.onclick = function(e){
+                                e.preventDefault();
+                            }
 
 
                         })
