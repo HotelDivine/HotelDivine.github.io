@@ -1,28 +1,28 @@
-document.addEventListener('DOMContentLoaded',()=>{
-$.ajax({
-    url: 'json/habitaciones.json',
-    type: "GET",
-    contentType: false,
-    processData: false,
-    success: function (json) {
+document.addEventListener('DOMContentLoaded', () => {
+    $.ajax({
+        url: 'json/habitaciones.json',
+        type: "GET",
+        contentType: false,
+        processData: false,
+        success: function (json) {
 
-        let contenedor = document.getElementById('all-rooms');
+            let contenedor = document.getElementById('all-rooms');
 
-        for (var response in json) {
-            let data = json[response];
-            let title = data["titulo"];
-            let imagen = data["imagen"];
-            let description = data["descripcion"];
-            let price = data["precio"];
-            let id = data["id"];
-            let calificacion = data["calificacion"];
-            let top = data["top"];
+            for (var response in json) {
+                let data = json[response];
+                let title = data["titulo"];
+                let imagen = data["imagen"];
+                let description = data["descripcion"];
+                let price = data["precio"];
+                let id = data["id"];
+                let calificacion = data["calificacion"];
+                let top = data["top"];
 
-            // Crear el DOM
-            let room = document.createElement('div');
-            room.classList.add('room-bg', 'd-flex', 'justify-content-center');
+                // Crear el DOM
+                let room = document.createElement('div');
+                room.classList.add('room-bg', 'd-flex', 'justify-content-center');
 
-            room.innerHTML = `
+                room.innerHTML = `
             <div class="room-section d-md-flex gx-3 align-content-center justify-content-between">
     
                 <div class="room-section__media d-inline">
@@ -57,12 +57,10 @@ $.ajax({
                             </div>`;
 
 
-                            
-                            contenedor.appendChild(room);
-                            
-                        }
-                        // let total = document.getElementById("precioso");
-                        // total.innerHTML = price;
+
+                contenedor.appendChild(room);
+
+            }
 
             let fecha1input = document.getElementById('cantDini');
             let fecha2input = document.getElementById('cantDfin');
@@ -71,68 +69,78 @@ $.ajax({
             let dia = fechaActual.getDate().toString().padStart(2, '0');
             let mes = (fechaActual.getMonth() + 1).toString().padStart(2, '0');
             let anio = fechaActual.getFullYear().toString();
-            
+
             let fechaFinal1 = `${anio}-${mes}-${dia}`;
             fecha1input.setAttribute('min', fechaFinal1);
-            fecha1input.addEventListener("change",()=>{
+            fecha1input.addEventListener("change", () => {
                 fecha2input.removeAttribute("disabled");
                 fecha2input.setAttribute('min', fecha1input.value);
-                fecha2input.addEventListener("change",()=>{
+                fecha2input.addEventListener("change", () => {
                     let fecha1 = new Date(fecha1input.value);
                     let fecha2 = new Date(fecha2input.value);
                     let diferenciaEnMilisegundos = Math.abs(fecha2.getTime() - fecha1.getTime());
                     let diasEntreFechas = Math.ceil(diferenciaEnMilisegundos / (1000 * 60 * 60 * 24));
 
                     console.log(diasEntreFechas);
-                    
-                    
+
+
                 });
             });
 
 
 
 
-          let buttons = document.getElementsByClassName('btn-reservation');
-          for (let i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener('click', function() {
-              console.log(buttons[i].value);
+            let buttons = document.getElementsByClassName('btn-reservation');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener('click', function () {
+                    console.log(buttons[i].value);
 
-              let btnId = buttons[i].value;
-              fetch('json/habitaciones.json')
-                .then((response) => response.json())
-                .then((json) => {
-                    
-                    let precio = json[btnId]["precio"];
-                    let total = document.getElementById("precio");
-                    total.innerHTML = precio;
+                    let btnId = buttons[i].value;
+                    fetch('json/habitaciones.json')
+                        .then((response) => response.json())
+                        .then((json) => {
+
+                            let precio = json[btnId]["precio"];
+                            let total = document.getElementById("precio");
+                            var boton = document.getElementById("fin");
+                            var cantHa = document.getElementById("cantH");
+                            const mayores = document.getElementById("cantMay");
+                            const menores = document.getElementById("cantMen");
+                            boton.addEventListener("click", function () {
+                                var habita = cantHa.value;
+                                var may = mayores.value;
+                                var men = menores.value;
+                                let precioTotal = (precio * habita) + (may * 1000) + (men * 500);
+                                total.innerHTML = precioTotal;
+                            });
 
 
-                })
-                
+                        })
+
+                });
+            }
+            const habitacionesInput = document.getElementById("cantH");
+            const outputHabitaciones = document.getElementById("cantHm");
+            habitacionesInput.addEventListener("input", function () {
+                outputHabitaciones.textContent = habitacionesInput.value;
             });
-          }
-        const habitacionesInput = document.getElementById("cantH");
-        const outputHabitaciones = document.getElementById("cantHm");
-        habitacionesInput.addEventListener("input", function () {
-            outputHabitaciones.textContent = habitacionesInput.value;
-        });
 
-        const mayoresInput = document.getElementById("cantMay");
-        const outputMayores = document.getElementById("cantMaym");
-        mayoresInput.addEventListener("input", function () {
-            outputMayores.textContent = mayoresInput.value;
-        });
+            const mayoresInput = document.getElementById("cantMay");
+            const outputMayores = document.getElementById("cantMaym");
+            mayoresInput.addEventListener("input", function () {
+                outputMayores.textContent = mayoresInput.value;
+            });
 
-        const menoresInput = document.getElementById("cantMen");
-        const outputMenores = document.getElementById("cantMenm");
-        menoresInput.addEventListener("input", function () {
-            outputMenores.textContent = menoresInput.value;
-        });
+            const menoresInput = document.getElementById("cantMen");
+            const outputMenores = document.getElementById("cantMenm");
+            menoresInput.addEventListener("input", function () {
+                outputMenores.textContent = menoresInput.value;
+            });
 
-        const diasInput = document.getElementById("cantD");
-        const outputDias = document.getElementById("cantDm");
+           // const diasInput = document.getElementById("cantD");
+            //const outputDias = document.getElementById("cantDm");
 
-    }
+        }
 
-});
+    });
 });
