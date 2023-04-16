@@ -48,20 +48,15 @@ $.ajax({
                                 $
                                 <span id="price">${price}</span>
                             </span>
-                            </p>
-                            </div>
-                            <button type="button" class="btn btn-gold btn-reservation" id="btn-reservation" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-                            Comenzar reserva
-                            </button>
-                            </div>`;
-
-
+                        </p>
+                    </div>
+                    <button type="button" class="btn btn-gold btn-reservation" id="btn-reservation" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                    Comenzar reserva
+                    </button>
+                </div>`;
                             
                             contenedor.appendChild(room);
-                            
                         }
-                        // let total = document.getElementById("precioso");
-                        // total.innerHTML = price;
 
         const habitacionesInput = document.getElementById("cantH");
         const outputHabitaciones = document.getElementById("cantHm");
@@ -83,6 +78,5 @@ $.ajax({
 
         const diasInput = document.getElementById("cantD");
         const outputDias = document.getElementById("cantDm");
-
     }
-})
+});
