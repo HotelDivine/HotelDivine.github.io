@@ -77,18 +77,15 @@ nav .container-fluid {
 #hero .btn-gold:hover {
     background: #ca9b23;
 }
+
 /* INTRO */
-
-#intro {
-    min-height: 75vh;
-}
-
 #intro .info {
-    height: 60vh;
+    width: 60%;
 }
-
-#intro p {
-    margin: 0px;
+@media screen and (max-width: 768px) {
+    #intro .info {
+        width: auto;
+    }
 }
 
 #intro h1 {
@@ -97,10 +94,16 @@ nav .container-fluid {
 }
 
 #intro .img-intro {
-    height: clamp(221px, 35vw, 389px);
+    min-width: 300px;
     aspect-ratio: 3/4;
     background: url(../images/fondo-service.jpg) center center no-repeat;
     background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    #intro .img-intro {
+        min-width: min(400px,95%);
+    }
 }
 
 /* SECTION SERVICES */
@@ -655,13 +658,6 @@ nav .container-fluid {
 @media (max-width: 576px) {
     #intro .txt-icon {
         text-align: center;
-    }
-}
-
-@media screen and (max-width: 911px) {
-    #intro .img-intro {
-        height: 447px;
-        aspect-ratio: 3/4;
     }
 }
 
