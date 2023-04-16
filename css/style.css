@@ -41,7 +41,7 @@ body {
 
 /* NAVBAR */
 nav .container-fluid {
-    max-width: 1040px;
+    /* max-width: 1040px; */
 }
 
 .bg-darkblue {
@@ -89,7 +89,6 @@ nav .container-fluid {
 
 #intro .info {
     height: 60vh;
-    max-width: 600px;
 }
 
 #intro p {
@@ -115,6 +114,14 @@ nav .container-fluid {
 }
 
 /* SECTION SERVICES */
+#servicios{
+    background-color: #1e2324;
+    background-image: url(../images/isotipo-bg-srvics.svg);
+    background-repeat: no-repeat;
+    background-size: 34rem;
+    background-position: 95% -300px;
+}
+
 #title-services {
     font-family: "Clash Display", sans-serif;
     font-size: 2.25rem;
@@ -122,13 +129,7 @@ nav .container-fluid {
 }
 
 .services {
-    width: 100%;
-    padding: 1.875rem 70px;
-    background-color: #1e2324;
-    background-image: url(../images/isotipo-bg-services.svg);
-    background-repeat: no-repeat;
-    background-size: 34rem;
-    background-position: 95% -300px;
+    /* padding: 1.875rem 70px; */
 }
 
 .services .grupo-1 {
@@ -280,7 +281,7 @@ nav .container-fluid {
 
 /* SECCION HABITACIONES */
 .room-description {
-    width: 95vw;
+    /* width: 95vw; */
     margin: auto;
 }
 
@@ -513,13 +514,13 @@ nav .container-fluid {
 }
 
 #comments .usr-comment > p {
-    max-width: 500px;
-    font-size: 14px;
+    max-width: 60%;
+    font-size: 16px;
 }
 
 /* CONTACTO */
 #contacto {
-    width: 95vw;
+    /* width: 95vw; */
     margin: auto;
 }
 
@@ -622,7 +623,7 @@ nav .container-fluid {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
