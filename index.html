@@ -416,7 +416,10 @@
                 </h2>
                 <div id="container-contact" class="row mx-auto">
                     <!-- Form -->
-                    <form class="col-12 col-lg-5 p-0 mb-lg-0 mb-4">
+                    <form
+                        class="col-12 col-lg-5 p-0 mb-lg-0 mb-4 needs-validation"
+                        novalidate
+                    >
                         <h3 class="contact-titles mb-4">Contacto</h3>
                         <div class="d-grid gap-3">
                             <div class="mb-3">
@@ -428,7 +431,11 @@
                                     class="form-control"
                                     id="InputName"
                                     placeholder="Escriba su nombre..."
+                                    required
                                 />
+                                <div class="invalid-feedback">
+                                    debe rellenar este campo para continuar
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label
@@ -441,7 +448,11 @@
                                     class="form-control"
                                     id="exampleInputEmail1"
                                     placeholder="correo@ejemplo.com"
+                                    required
                                 />
+                                <div class="invalid-feedback">
+                                    debe rellenar este campo para continuar
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label
@@ -454,7 +465,11 @@
                                     id="exampleFormControlTextarea1"
                                     rows="3"
                                     placeholder="Escriba aquí..."
+                                    required
                                 ></textarea>
+                                <div class="invalid-feedback">
+                                    debe rellenar este campo para continuar
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-gold">
                                 Enviar
@@ -566,6 +581,8 @@
             name="reservar_frm"
             enctype="application/x-www-form-urlencoded"
             id="submit"
+            class="needs-validation"
+            novalidate
         >
             <div
                 class="modal fade"
@@ -668,6 +685,7 @@
                                                             max="4"
                                                             min="0"
                                                             name="cantH"
+                                                            required
                                                         />
                                                     </div>
                                                     <hr />
@@ -697,6 +715,7 @@
                                                             max="8"
                                                             min="0"
                                                             name="cantMay"
+                                                            required
                                                         />
                                                     </div>
                                                     <hr />
@@ -726,6 +745,7 @@
                                                             max="8"
                                                             min="0"
                                                             name="cantMen"
+                                                            required
                                                         />
                                                     </div>
                                                 </div>
@@ -748,6 +768,7 @@
                                                     id="cantDini"
                                                     class="form-control"
                                                     name="cantDini"
+                                                    required
                                                 />
                                             </div>
                                             <div class="col">
@@ -757,6 +778,7 @@
                                                     class="form-control"
                                                     disabled="off"
                                                     name="cantDfin"
+                                                    required
                                                 />
                                             </div>
                                         </div>
@@ -905,6 +927,7 @@
                                                     class="form-control"
                                                     placeholder="Nombre"
                                                     name="nombre"
+                                                    required
                                                 />
                                             </div>
                                             <div class="col">
@@ -914,6 +937,7 @@
                                                     class="form-control"
                                                     placeholder="Apellido"
                                                     name="apellido"
+                                                    required
                                                 />
                                             </div>
                                         </div>
@@ -937,6 +961,7 @@
                                                 id="inputEmail3"
                                                 placeholder="ejemplo123@email.com"
                                                 name="email"
+                                                required
                                             />
                                         </div>
                                     </div>
