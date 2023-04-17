@@ -61,6 +61,7 @@ nav .container-fluid {
     background-color: #171a1b;
 }
 
+/* SECTION HERO */
 #hero {
     background: rgba(0, 0, 0, 0.35) url(../images/suite.jpg) center center
         no-repeat;
@@ -88,13 +89,19 @@ nav .container-fluid {
 }
 
 /* INTRO */
+#intro h2 {
+    font-family: "Clash Display", sans-serif;
+    font-size: 2.25rem;
+    margin: 0;
+}
+
 #intro .info {
     width: 60%;
 }
-@media screen and (max-width: 768px) {
-    #intro .info {
-        width: auto;
-    }
+
+.text-intro {
+    line-height: 1.8rem;
+    padding: 1.5rem 0;
 }
 
 #intro h1 {
@@ -107,12 +114,6 @@ nav .container-fluid {
     aspect-ratio: 3/4;
     background: url(../images/fondo-service.jpg) center center no-repeat;
     background-size: cover;
-}
-
-@media screen and (max-width: 768px) {
-    #intro .img-intro {
-        min-width: min(400px,95%);
-    }
 }
 
 /* SECTION SERVICES */
@@ -613,22 +614,17 @@ nav .container-fluid {
     padding: 2.8125rem 0rem;
 }
 
+.grupo-1 hr {
+    display: none;
+}
+
 .pie-pagina .grupo-1 .box .figure-logo {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
 }
 
 .pie-pagina .grupo-1 .box .figure-logo .figure-logo-img {
     width: 11.25rem;
-    transition: all 300ms ease;
-    color: #f2ede3;
-}
-
-.pie-pagina .grupo-1 .box .figure-logo .figure-logo-img:hover {
-    filter: drop-shadow(1px 1px 2px #a47e1b);
 }
 
 .pie-pagina .grupo-1 .box h3 {
@@ -676,17 +672,24 @@ nav .container-fluid {
     font-size: 0.75rem;
 }
 
-.pie-pagina hr {
-    display: none;
-    height: 0.0625rem;
-}
-
 /* ======= MEDIA QUERIES ======= */
 
 /* INTRO */
 @media (max-width: 576px) {
     #intro .txt-icon {
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #intro .info {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #intro .img-intro {
+        min-width: min(400px,95%);
     }
 }
 
@@ -711,7 +714,12 @@ nav .container-fluid {
         padding: 2.1875rem 0rem;
     }
 
-    hr {
+    .box-logo figure {
+        display: flex;
+        justify-content: center;
+    }
+
+    .grupo-1 hr {
         display: block;
     }
 

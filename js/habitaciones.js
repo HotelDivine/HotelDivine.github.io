@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                 $
                                 <span id="price">${price}</span>
                             </span>
-                            </p>
-                            </div>
-                            <button type="button" value="${id}" class="btn btn-gold btn-reservation" id="btn-reservation"" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                        </p>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="button" value="${id}" class="btn btn-gold d-grid btn-reservation" id="btn-reservation"" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                             Comenzar reserva
-                            </button>
-                            </div>`;
-
-
+                        </button>
+                    </div>
+                </div>`;
 
                 fragmento.appendChild(room);
 
