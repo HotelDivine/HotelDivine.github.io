@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         success: function (json) {
 
             let contenedor = document.getElementById('all-rooms');
-
+            let fragmento = document.createDocumentFragment();
             for (var response in json) {
                 let data = json[response];
                 let title = data["titulo"];
@@ -58,9 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-                contenedor.appendChild(room);
+                fragmento.appendChild(room);
 
             }
+            contenedor.appendChild(fragmento);
 
             let nombre = document.getElementById("nombre");
             let apellido = document.getElementById("apellido");
@@ -111,6 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     diasEntreFechas = Math.ceil(diferenciaEnMilisegundos / (1000 * 60 * 60 * 24));
                     // activo el boton siguiente del modal1
                     boton1.disabled = false;
+                    // 
+                    let inputNoche = document.getElementById("noches");
+                    inputNoche.setAttribute('value', diasEntreFechas);
                 });
             });
 
@@ -118,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // todos los botones con la clase btn-reservation
             let buttons = document.getElementsByClassName('btn-reservation');
+            let total = document.getElementById("precio");
             // recorro los botones
             for (let i = 0; i < buttons.length; i++) {
                 // si uno de esos botones es tocado, identifica cual es el i en el que esta (por ejemplo 4)
@@ -130,8 +135,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         .then((json) => {
                             // busca en el json, en la posicion 4, el valor del precio
                             let precio = json[btnId]["precio"];
+                            // busca el input oculto con el id precio noche y ponele el precio
+                            let inputPrecioNoche = document.getElementById("precioNoche");
+                            inputPrecioNoche.setAttribute('value', precio);
 
-                            let total = document.getElementById("precio");
                             var cantHa = document.getElementById("cantH");
                             // les doy ese valor para que el precio total tenga algo de que sumar
                             var habita = 0;
@@ -139,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             var men = 0;
                             const mayores = document.getElementById("cantMay");
                             const menores = document.getElementById("cantMen");
+                            var precioTotal = 0;
                             // cuando el boton siguiente del modal 1 sea clickeado
                             boton1.addEventListener("click", function (e) {
                                 e.preventDefault();
@@ -148,6 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                 var men = menores.value;
                                 // calculo el precio total con esta formulota
                                 precioTotal = ((precio * habita) + (may * 1000) + (men * 500))*diasEntreFechas;
+                                // creo un input tipo hidden
+                                let inpTotal = document.getElementById("total");
+                                inpTotal.setAttribute('value', precioTotal);
+                                console.log(inpTotal);
 
                                 let precio1 = document.getElementById("fechaEnt");
                                 let precio2 = document.getElementById("fechaSal");

@@ -1,5 +1,4 @@
 let d = document;
-
 d.addEventListener("DOMContentLoaded",()=>{
 let descargarTicket = document.getElementById('downloadTicket');
   descargarTicket.addEventListener('click',()=>{
@@ -8,7 +7,9 @@ let descargarTicket = document.getElementById('downloadTicket');
   });
 })
 function generatePdf() {
-
+  let inpTotal = document.getElementById("total");
+  let inputNoche = document.getElementById('noches');
+  let inputPrecioNoche = document.getElementById("precioNoche");
 	let dateIn = d.getElementById('cantDini').value;
 	let dateOut = d.getElementById('cantDfin').value;
   let rucH = 'RUC : 0000000000';
@@ -107,25 +108,30 @@ doc.text('Datos del cliente', textCenterX('Datos del cliente'), 145);
     doc.text(separator, textCenterX(separator),175);
     ////////////////////////////////////
 
-    doc.text("Fecha entrada", 2, 185);
-    doc.text(dateIn, 60, 185);
-    doc.text("Fecha salida", 2, 190);
-    doc.text(dateOut, 60, 190);
-    doc.text("Noches", 2, 195);
-    doc.text("3", 60, 195);
+    doc.text("Fecha entrada", 8, 185);
+    doc.text(dateIn, 50, 185);
+    doc.text("Fecha salida", 8, 190);
+    doc.text(dateOut, 50, 190);
+    doc.text("Noches", 8, 195);
+    doc.text(inputNoche.value, 50, 195);
 
-    doc.text("Precio por noche", 2, 200);
-    doc.text("$140 USD", 60, 200);
+    doc.text("Precio por noche", 8, 200);
+    doc.text(inputPrecioNoche.value, 50, 200);
 
     ////////////////////////////////////
     doc.text(separator, textCenterX(separator),210);
     ////////////////////////////////////
 
-    doc.text("Total a pagar", 2, 220);
-    doc.text("$2000 USD", 60, 220);
+    let iva = inpTotal.value * 0.06;
+    let total = Number(inpTotal.value) + iva + 20;
+    doc.text("IVA (6%)", 8, 220);
+    doc.text(`$${iva} USD`, 50, 220);
+
+    doc.text("Propina para el hotel", 8, 225);
+    doc.text("$20 USD", 50, 225);
     
-    doc.text("Usted ahorra", 2, 225);
-    doc.text("$20 USD", 60, 225);
+    doc.text("Total a pagar", 8, 230);
+    doc.text(`$${total} USD`, 50, 230);
 
     doc.setFontSize(8);
     let adv = `*** Precios de productos incluyen impuestos.
