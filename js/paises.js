@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	  .then(json => {
 	    // Obtener el elemento SELECT del DOM
 	    const select = document.getElementById('inputState');
-
+	    let fragmento = document.createDocumentFragment();
 	    // Iterar a través de los datos de los países
 	    json.forEach(pais => {
 	      // Crear una opción para el país
@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	      option.text = pais.name.common;
 	      option.value = pais.name.common;
 
-	      select.appendChild(option);
+	      fragmento.appendChild(option);
 	    });
+	    select.appendChild(fragmento);
 	  });
 })
