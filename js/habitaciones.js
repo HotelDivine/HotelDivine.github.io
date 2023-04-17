@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     boton2.disabled = false;
                                 }
                             }
+                           
                             boton2.onclick = function(e){
                                 // no mando el formulario
                                 e.preventDefault();
