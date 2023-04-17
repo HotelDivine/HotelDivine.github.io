@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                 // formateo el precio total para que me ponga puntos en el precio
                                 precioTotal = new Intl.NumberFormat('de-US', { style: 'currency', currency:'USD'}).format(precioTotal);
+                                console.log(total);                              
                                 total.innerHTML = `(${precioTotal}USD)`;
                                 
                             });
@@ -187,16 +188,17 @@ document.addEventListener('DOMContentLoaded', () => {
                                 // no mando el formulario
                                 e.preventDefault();
                             }
-                            let enviarForm = document.getElementById('submit');
+                            let enviarForm = document.getElementById('btn-submit');
                             // cuando trate de mandar el formulario
-                            document.addEventListener("submit",(e)=>{
-                                // no me mandes el formulario
+                            
+                            enviarForm.onclick = function(e){
                                 e.preventDefault();
                                 let descargarTicket = document.getElementById('downloadTicket');
                                 alert("Se reservo con exito, por favor descarga el ticket en el boton que te acabamos de habilitar");
                                 // habilitame el boton para descargar el comprobante
                                 descargarTicket.disabled = false;
-                            })
+                            }
+                            
                             let botonClose1 = document.getElementById("close1");
                             let botonClose2 = document.getElementById("close2");
                             let botonClose3 = document.getElementById("close3");
@@ -210,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                             botonClose3.onclick = function(e){
                                 e.preventDefault();
+                                
                             }
 
 
