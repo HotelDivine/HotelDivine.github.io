@@ -1,0 +1,76 @@
+<!doctype>
+<html>
+<head>
+    <title>jsPDF nando</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.17.custom.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="../dist/jspdf.debug.js"></script>
+    <script type="text/javascript" src="js/basic.js"></script>
+
+    <script>
+        $(function() {
+            $("#accordion-basic, #accordion-text, #accordion-graphic").accordion({
+                autoHeight: false,
+                navigation: true
+            });
+            $( "#tabs" ).tabs();
+            $(".button").button();
+        });
+    </script>
+</head>
+
+<body>
+
+<a href="https://github.com/MrRio/jsPDF">
+  <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
+</a>
+
+<h1>jsPDF Demos</h1>
+
+<p>Examples for using jsPDF with Data URIs below. Go <a href="https://github.com/MrRio/jsPDF">back to project homepage</a>.</p>
+
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-basic">Basic elements</a></li>
+    </ul>
+
+    <div id="tabs-basic">
+<div id="accordion-basic">
+
+<h2><a href="#">Example of user input</a></h2>
+<div><p><pre>var name = prompt('What is your name?');
+var multiplier = prompt('Enter a number:');
+multiplier = parseInt(multiplier);
+
+var doc = new jsPDF();
+doc.setFontSize(22);
+doc.text(20, 20, 'Questions');
+doc.setFontSize(16);
+doc.text(20, 30, 'This belongs to: ' + name);
+
+for(var i = 1; i <= 12; i ++) {
+    doc.text(20, 30 + (i * 10), i + ' x ' + multiplier + ' = ___');
+}
+
+doc.addPage();
+doc.setFontSize(22);
+doc.text(20, 20, 'Answers');
+doc.setFontSize(16);
+
+for(var i = 1; i <= 12; i ++) {
+    doc.text(20, 30 + (i * 10), i + ' x ' + multiplier + ' = ' + (i * multiplier));
+}
+doc.save('Test.pdf');</pre>
+<a href="javascript:demoUserInput()" class="button">Run Code</a></p></div>
+</div>
+    </div>
+</div>
+   
+
+</body>
+</html>
